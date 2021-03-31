@@ -1,0 +1,21 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Changa', sans-serif;
+    --app-max-width: 1200px;
+    --gray-00: #222;
+    --white-00: #fff;
+
+    --space-01: 1rem;
+    --space-02: 2rem;
+    background: var(--gray-00);
+}
+a{
+    text-decoration: none;
+    color: var(--white-00);
+}
+a:hover{
+    opacity: 0.8;
+}
