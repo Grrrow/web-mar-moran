@@ -2,7 +2,7 @@
   <div class="slider">
     <vueper-slides
       class="no-shadow"
-      autoplay
+      autoplay 
       :visible-slides="1"
       slide-multiple
       :gap="3"
