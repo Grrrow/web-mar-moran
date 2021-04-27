@@ -1,15 +1,15 @@
 <template>
     <header>
         <div class="container">
-            <a href="/"><img src="//39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></a>
+            <router-link to="/"><img src="//39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></router-link>
             <div class="links">
-                <a class="link" href="">Home</a>
-                <a class="link" href="">{{ $t('header.photo') }}</a>
-                <a class="link" href="">{{ $t('header.music') }}</a>
-                <a class="link" href="">{{ $t('header.video') }}</a>
-                <a class="link" href="">{{ $t('header.biography') }}</a>
-                <a class="link" href="">{{ $t('header.contact') }}</a>
-                <a class="link" href="">{{ $t('header.schedule') }}</a>
+                <router-link class="link" to="/">Home</router-link>
+                <router-link class="link" to="">{{ $t('header.photo') }}</router-link>
+                <router-link class="link" to="">{{ $t('header.music') }}</router-link>
+                <router-link class="link" to="">{{ $t('header.video') }}</router-link>
+                <router-link class="link" to="">{{ $t('header.biography') }}</router-link>
+                <router-link class="link" to="">{{ $t('header.contact') }}</router-link>
+                <router-link class="link" to="news">{{ $t('header.news') }}</router-link>
                 <select v-model="$i18n.locale">
                     <option value="en">en</option>
                     <option value="es">es</option>

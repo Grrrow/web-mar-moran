@@ -6,7 +6,8 @@ export const messages = {
             video: "Videos",
             biography: "Biography",
             contact: "Contact",
-            schedule: "Schedule"
+            schedule: "Schedule",
+            news: "News"
         },
         biography:{
             title: "Biography"
@@ -19,7 +20,9 @@ export const messages = {
             video: "Videos",
             biography: "Biografía",
             contact: "Contacto",
-            schedule: "Agenda"
+            schedule: "Agenda",
+            news: "Noticias"
+
         },
         biography:{
             title: "Biografía",
