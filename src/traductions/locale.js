@@ -19,6 +19,13 @@ export const messages = {
                 paragraph4: "Mar ha recibido diferentes premios como el Premio Extraordinario y la Beca de Juventudes Musicales de la Comunidad de Madrid. Además, trabajó como soprano titular en el Coro del Teatro Real de Madrid durante varias temporadas.",
                 paragraph5: "En la actualidad está realizando un curso de postgrado en la Academia Internacional de Ópera de Gante (Bélgica)."
             }
+        },
+        news: {
+            title: "News"
+        },
+        events: {
+            title: "Next Events",
+            showMore: "Show More"
         }
     },
     es: {
@@ -42,6 +49,13 @@ export const messages = {
                 paragraph4: "Mar ha recibido diferentes premios como el Premio Extraordinario y la Beca de Juventudes Musicales de la Comunidad de Madrid. Además, trabajó como soprano titular en el Coro del Teatro Real de Madrid durante varias temporadas.",
                 paragraph5: "En la actualidad está realizando un curso de postgrado en la Academia Internacional de Ópera de Gante (Bélgica)."
             }
+        },
+        events: {
+            title: "Próximos eventos",
+            showMore: "Ver Más"
+        },
+        news: {
+            title: "Noticias"
         }
     }
 }
