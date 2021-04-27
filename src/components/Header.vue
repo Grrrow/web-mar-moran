@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <a href="/">Mar Moran</a>
+            <a href="/"><img src="//39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></a>
             <div class="links">
                 <a class="link" href="">Home</a>
                 <a class="link" href="">{{ $t('header.photo') }}</a>

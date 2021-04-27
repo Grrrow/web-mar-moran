@@ -1,15 +1,18 @@
 }
 <template>
-  <Header/>
-  <Hero />
-  <Biography />
+  <div>
+    <Header/>
+    <Hero />
+    <Biography />
+    <News />
+  </div>
 </template>
 
 <script setup>
 import Hero from './components/Hero.vue'
 import Header from './components/Header.vue'
 import Biography from './components/Biography.vue'
-
+import News from './components/News.vue'
 </script>
 
 <style>
