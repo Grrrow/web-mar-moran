@@ -4,7 +4,7 @@
             <router-link to="/"><img src="//39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></router-link>
             <div class="links">
                 <router-link class="link" to="/">Home</router-link>
-                <router-link class="link" to="">{{ $t('header.photo') }}</router-link>
+                <router-link class="link" to="photos">{{ $t('header.photo') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.music') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.video') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.biography') }}</router-link>
