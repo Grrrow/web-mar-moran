@@ -1,6 +1,8 @@
 <template>
   <Header/>
-  <router-view />
+  <main id="page-wrap">
+    <router-view />
+  </main>
 </template>
 
 <script setup>

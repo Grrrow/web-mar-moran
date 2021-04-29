@@ -98,6 +98,7 @@
     }
     .contact-info{
         text-align: left;
+        padding: 1rem;
     }
     .contact-info__title{
         font-family: "Changa", sans-serif;
