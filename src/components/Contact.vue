@@ -27,7 +27,7 @@
 </template>
 <script>
     import emailjs from 'emailjs-com'
-    import credentials from '../credentials'
+///    import credentials from '../credentials'
     import SocialBanner from './SocialBanner.vue'
     
     export default {
@@ -47,7 +47,7 @@
             sendEmail(e) {
                  this.success = false;
                  this.error = false
-                emailjs.init(credentials.emailjs.userId)
+              /*  emailjs.init(credentials.emailjs.userId)
             emailjs.send(credentials.emailjs.serviceId, credentials.emailjs.templateId,
             {
                 from_name: this.name,
@@ -61,7 +61,7 @@
                 }, (error) => {
                     console.log('FAILED...', error);
                     this.error = true;
-                });
+                });*/
             },
             resetForm(){
                 this.name="";
