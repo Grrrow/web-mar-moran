@@ -57,4 +57,15 @@ h3{
 .event-card{
     margin: 1rem;
 }
+@media (max-width: 750px) {
+    .container{
+        padding: 0;
+    }
+    .container .title{
+        text-align: center;
+    }
+    .event-list{
+        justify-content: center;
+    }
+}
 </style>

@@ -99,4 +99,18 @@
         max-width: var(--app-max-width);
     }
 }
+@media (max-width: 650px) {
+    .photo{
+        width:300px;
+        height: 200px;
+    }
+    .photo img{
+        width: 350px;
+        top: 10px;
+        left: 1rem;
+    }
+    .content{
+        margin-left: 0;
+    }
+}
 </style>

@@ -71,7 +71,7 @@ export const messages = {
         },
         contact:{
             title: "Contact",
-            manager: "Manager",
+            manager: "Representante",
             form: {
                 name: "Tu nombre",
                 email: "Tu correo electrónico",
