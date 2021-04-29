@@ -4,6 +4,7 @@
     <Hero />
     <Biography />
     <News />
+    <Events />
   </div>
 </template>
 
@@ -11,6 +12,8 @@
 import Hero from '../components/Hero.vue'
 import Biography from '../components/Biography.vue'
 import News from '../components/News.vue'
+import Events from '../components/Events.vue'
+
 </script>
 
 <style>

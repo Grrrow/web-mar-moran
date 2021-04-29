@@ -1,7 +1,7 @@
 <template>
   <div class="news">
     <div class="container">
-      <h3>Noticias</h3>
+      <h3>{{ $t('news.title') }}</h3>
       <vueper-slides
         class="no-shadow"
         :visible-slides="4"
