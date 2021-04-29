@@ -1,0 +1,154 @@
+<template>
+    <div class="contact">
+        <h3 class="contact__title">Contacto</h3>
+        <div class="container">
+            <div class="contact-info">
+                <h1 class="contact-info__title">Representante</h1>
+                <p>Name</p>
+                <p>Company</p>
+                <p>Number</p>
+                <a href="mailto:email@email.com">email</a>
+            </div>
+            <form id="msform" @submit.prevent="sendEmail">
+                <fieldset>
+                    <input required type="text" v-model="name" name="name" placeholder="Nombre" />
+                    <input required type="text" v-model="email" name="email" placeholder="Email" />
+                    <textarea required name="message" v-model="message" id="" placeholder="Mensaje" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar" class="next action-button" />
+                </fieldset>
+                <div class="feedback-text">
+                    <div v-if="error" class="feedback-text__error"> Hubo un problema, intentelo de nuevo </div>
+                    <div v-if="success" class="feedback-text__success"> Mensaje enviado correctamente, le contestaremos lo antes posible </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+<script>
+    import emailjs from 'emailjs-com'
+    import credentials from '../credentials'
+
+    export default {
+        data(){
+            return {
+                email: '',
+                name: '',
+                message: '',
+                success: false,
+                error: false
+            }
+        },
+        methods: {
+            sendEmail(e) {
+                 this.success = false;
+                 this.error = false
+                emailjs.init(credentials.emailjs.userId)
+            emailjs.send(credentials.emailjs.serviceId, credentials.emailjs.templateId,
+            {
+                from_name: this.name,
+                to_name: "Web Mar Moran Soprano",
+                message: this.message,
+                reply_to: this.email,
+                }).then((result) => {
+                    console.log('SUCCESS!', result.status, result.text);
+                    this.success = true;
+                    this.resetForm();
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    this.error = true;
+                });
+            },
+            resetForm(){
+                this.name="";
+                this.email = "";
+                this.message = "";
+            }
+        }
+    }
+    
+</script>
+<style>
+    .contact{
+        min-height: 80vh;
+        background: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact__title{
+        padding-top: 4rem;
+        font-family: "Changa", sans-serif;
+        font-weight: normal;
+        font-size: 48px;
+    }
+    .contact .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: var(--app-max-width);
+    }
+    .contact-info{
+        text-align: left;
+    }
+    .contact-info__title{
+        font-family: "Changa", sans-serif;
+        font-weight: normal;
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+    }
+    .feedback-text{
+        text-align: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .feedback-text__error{
+        color: red;
+        display: block;
+        padding: 1rem;
+    }
+    .feedback-text__success{
+        color: rgb(0, 209, 0);
+        display: block;
+        max-width: 400px;
+    }
+    fieldset{
+        border: none;
+    }
+    /*inputs*/
+    #msform input, #msform textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+    /*buttons*/
+    #msform .action-button {
+        width: 100px;
+        background: #2c3e50;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 1px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+        transition: 0.3s;
+    }
+      #msform .action-button:hover, #msform .action-button:focus{
+          color: #2c3e50;
+          background: #ffff;
+          outline: 1px solid #2c3e50;
+      }
+
+</style>
