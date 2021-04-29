@@ -4,6 +4,7 @@
       <h3>{{ $t('news.title') }}</h3>
       <vueper-slides
         class="no-shadow"
+        fixed-height="400px"
         :visible-slides="4"
         slide-multiple
         :gap="3"
