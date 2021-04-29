@@ -4,7 +4,12 @@
     <div class="container">
       <h1>Fotos</h1>
       <div class="main_pictures">
-        <div v-for="(picture,index) in pictures" :key="index" @click="show(index)" class="pictures">
+        <div
+          v-for="(picture, index) in pictures"
+          :key="index"
+          @click="show(index)"
+          class="pictures"
+        >
           <PhotosCard :picture="picture" />
         </div>
       </div>
@@ -26,9 +31,9 @@ import PhotosCard from "../components/PhotosCard.vue";
 export default {
   components: { PhotosCard },
   mounted() {
-    this.pictures.map((picture) =>{
-      this.imgs.push(picture.picture)
-    } )
+    this.pictures.map((picture) => {
+      this.imgs.push(picture.picture);
+    });
   },
   data() {
     return {
@@ -71,7 +76,7 @@ export default {
   },
   methods: {
     show(index) {
-      this.index = index
+      this.index = index;
       this.visible = true;
     },
     handleHide() {
@@ -101,8 +106,21 @@ export default {
   flex-wrap: wrap;
 }
 .pictures {
-  width: 30%;
+  width: 370px;
   margin: 10px 0;
   padding: 0 15px;
+}
+@media (max-width: 1300px) {
+  .main_pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pictures {
+    width: 600px;
+    margin: 10px 0;
+    padding: 0 15px;
+  }
 }
 </style>
