@@ -15,7 +15,7 @@ import Biography from '../components/Biography.vue'
 import News from '../components/News.vue'
 import Events from '../components/Events.vue'
 import Contact from '../components/Contact.vue'
-
+console.log(process.env.VUE_APP_EXAMPLE)
 </script>
 
 <style>
