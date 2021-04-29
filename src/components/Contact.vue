@@ -1,24 +1,25 @@
 <template>
     <div class="contact">
-        <h3 class="contact__title">Contacto</h3>
+        <h3 class="contact__title">{{ $t('contact.title') }}</h3>
         <div class="container">
             <div class="contact-info">
-                <h1 class="contact-info__title">Representante</h1>
+                <h1 class="contact-info__title">{{ $t('contact.manager') }}</h1>
                 <p>Name</p>
                 <p>Company</p>
                 <p>Number</p>
                 <a href="mailto:email@email.com">email</a>
+                <SocialBanner />
             </div>
             <form id="msform" @submit.prevent="sendEmail">
                 <fieldset>
-                    <input required type="text" v-model="name" name="name" placeholder="Nombre" />
-                    <input required type="text" v-model="email" name="email" placeholder="Email" />
-                    <textarea required name="message" v-model="message" id="" placeholder="Mensaje" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Enviar" class="next action-button" />
+                    <input required type="text" v-model="name" name="name" :placeholder="$t('contact.form.name')" />
+                    <input required type="text" v-model="email" name="email" :placeholder="$t('contact.form.email')" />
+                    <textarea required name="message" v-model="message" id="" :placeholder="$t('contact.form.message')" cols="30" rows="10"></textarea>
+                    <input type="submit" :value="$t('contact.form.send')" class="next action-button" />
                 </fieldset>
                 <div class="feedback-text">
-                    <div v-if="error" class="feedback-text__error"> Hubo un problema, intentelo de nuevo </div>
-                    <div v-if="success" class="feedback-text__success"> Mensaje enviado correctamente, le contestaremos lo antes posible </div>
+                    <div v-if="error" class="feedback-text__error"> {{ $t('contact.form.error') }} </div>
+                    <div v-if="success" class="feedback-text__success"> {{ $t('contact.form.success') }}</div>
                 </div>
             </form>
         </div>
@@ -27,8 +28,12 @@
 <script>
     import emailjs from 'emailjs-com'
     import credentials from '../credentials'
-
+    import SocialBanner from './SocialBanner.vue'
+    
     export default {
+        components:{
+          SocialBanner
+        },
         data(){
             return {
                 email: '',
@@ -77,7 +82,7 @@
         align-items: center;
     }
     .contact__title{
-        padding-top: 4rem;
+        padding-top: 1rem;
         font-family: "Changa", sans-serif;
         font-weight: normal;
         font-size: 48px;
@@ -89,6 +94,7 @@
         align-items: flex-start;
         justify-content: space-between;
         max-width: var(--app-max-width);
+        flex-wrap: wrap;
     }
     .contact-info{
         text-align: left;
@@ -149,6 +155,15 @@
           color: #2c3e50;
           background: #ffff;
           outline: 1px solid #2c3e50;
+      }
+      @media(max-width: 1025px){
+        .contact .container{
+            justify-content: center;
+        }
+        .contact-info{
+            width: 100%;
+            max-width: 767px;
+        }
       }
 
 </style>
