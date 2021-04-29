@@ -75,70 +75,7 @@ export default {
             "https://marmoransoprano.es/wp-content/uploads/2020/07/LogoPlateaNuevoCompleto-e1595799158681.png",
           url:
             "https://www.plateamagazine.com/noticias/10173-la-soprano-mar-moran-premio-lola-rodriguez-de-aragon-2020-de-la-escuela-superior-de-canto-de-madrid",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "MOMO",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba1",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba2",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba3",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba4",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba5",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba6",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba7",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
-        {
-          img:
-            "https://marmoransoprano.es/wp-content/uploads/2021/01/A9_05039-scaled-300x200.jpg",
-          text: "Prueba8",
-          source:
-            "https://marmoransoprano.es/wp-content/uploads/2021/02/radionacionalclasica-e1612390880165.png",
-        },
+        }
       ],
     };
   },
