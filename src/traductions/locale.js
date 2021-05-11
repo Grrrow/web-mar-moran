@@ -26,6 +26,9 @@ export const messages = {
         events: {
             title: "Next Events",
             showMore: "Show More"
+        },
+        videos: {
+            title: "Videos"
         }
     },
     es: {
@@ -56,6 +59,9 @@ export const messages = {
         },
         news: {
             title: "Noticias"
+        },
+        videos: {
+            title: "Videos"
         }
     }
 }

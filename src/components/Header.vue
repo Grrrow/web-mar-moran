@@ -6,7 +6,7 @@
                 <router-link class="link" to="/">Home</router-link>
                 <router-link class="link" to="photos">{{ $t('header.photo') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.music') }}</router-link>
-                <router-link class="link" to="">{{ $t('header.video') }}</router-link>
+                <router-link class="link" to="videos">{{ $t('header.video') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.biography') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.contact') }}</router-link>
                 <router-link class="link" to="news">{{ $t('header.news') }}</router-link>

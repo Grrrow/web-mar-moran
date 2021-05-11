@@ -11,6 +11,8 @@ html{
 
     --space-01: 1rem;
     --space-02: 2rem;
+
+    --border-radius: 10px;
     background: var(--gray-00);
 }
 a{
