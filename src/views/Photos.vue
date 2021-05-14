@@ -118,7 +118,7 @@ export default {
     flex-wrap: wrap;
   }
   .pictures {
-    width: 600px;
+    width: 400px;
     margin: 10px 0;
     padding: 0 15px;
   }
