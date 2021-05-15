@@ -26,108 +26,138 @@ export default {
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
         {
           title: 'Luna Clara',
           cover: 'src/assets/images/music/lunaclara.jpeg',
+          soprano: 'Mar Morán',
+          piano: 'Aurelio Viribay',
+          spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
+          appleMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
+          amazonMusic: 'https://music.apple.com/gr/album/luna-clara/1537670626',
           songs: [
             {
-              title: 'It´s my Life',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test.mp3',
+              title: 'Luna Clara',
+              src: 'luna.mp3',
             },
             {
-              title: 'You Give Love a Bad Name',
-              author: 'Jesús el músicas',
-              piano: 'Aurelio el pianista',
-              src: 'test2.mp3',
+              title: 'La niña sola',
+              src: 'nina.mp3',
+            },
+            {
+              title: 'Malibran',
+              src: 'malibran.mp3',
             },
           ]
         },
