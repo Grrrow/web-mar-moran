@@ -27,9 +27,17 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
+
 import PhotosCard from "../components/PhotosCard.vue";
 export default {
   components: { PhotosCard },
+  setup(){
+    useMeta({
+      title: 'Fotos',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
   mounted() {
     this.pictures.map((picture) => {
       this.imgs.push(picture.picture);
