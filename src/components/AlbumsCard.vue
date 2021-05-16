@@ -6,13 +6,13 @@
           <source :id="'source'+id" :src="source" type="audio/mpeg" />
         </audio>
         <img class="album" :class="{ goleft: playing }" :src="album.cover" alt=""/>
-        <img class="needle" :class="{ visible: playing }" src="src/assets/images/music/needle.png" alt=""/>
+        <img class="needle" :class="{ visible: playing }" src="../assets/images/music/needle.png" alt=""/>
         <div v-if="!controls">
           <div class="control" @click="playMusic()" v-if="!playing">
              <i class="fa fa-play"></i>
           </div>
         </div>
-        <img class="cd" :class="{ spin: playing }" src="src/assets/images/music/vinyl.png" alt=""/>
+        <img class="cd" :class="{ spin: playing }" src="../assets/images/music/vinyl.png" alt=""/>
       </div>
       <div :class="{controlhidden: !controls, showcontrols: controls}">
         <p class="subtitle">{{mtitle}}</p>
@@ -79,7 +79,7 @@ export default {
     };
   },
   mounted() {
-    this.source = "src/assets/audio/"+ this.album.songs[this.currentTrack].src
+    this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
     this.mtitle = this.album.songs[this.currentTrack].title
     this.music = document.getElementById("song" + this.id);
   },
@@ -113,7 +113,7 @@ export default {
       if(this.music.play){
         this.music.load()
       }
-      this.source = "src/assets/audio/"+ this.album.songs[this.currentTrack].src
+      this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
       this.mtitle = this.album.songs[this.currentTrack].title
       this.playMusic()
     },
@@ -123,7 +123,7 @@ export default {
           this.music.load()
         }
         this.currentTrack --
-        this.source = "src/assets/audio/"+ this.album.songs[this.currentTrack].src
+        this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
         this.mtitle = this.album.songs[this.currentTrack].title
         this.playMusic()
       }
