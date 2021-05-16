@@ -42,6 +42,7 @@ export default {
     this.pictures.map((picture) => {
       this.imgs.push(picture.picture);
     });
+    console.log(process.env.VUE_APP_EXAMPLE)
   },
   data() {
     return {
