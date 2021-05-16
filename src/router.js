@@ -3,6 +3,7 @@ import Home from './views/Home.vue';
 import News from './views/News.vue';
 import Photos from './views/Photos.vue';
 import Videos from './views/Videos.vue';
+import Music from './views/Music.vue';
 
 const routes = [
 	{
@@ -24,6 +25,9 @@ const routes = [
 		path: '/videos',
 		name: 'Videos',
 		component: Videos,
+		path: '/music',
+		name: 'Music',
+		component: Music,
 	},
 ];
 

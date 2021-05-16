@@ -27,9 +27,17 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
+
 import PhotosCard from "../components/PhotosCard.vue";
 export default {
   components: { PhotosCard },
+  setup(){
+    useMeta({
+      title: 'Fotos',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
   mounted() {
     this.pictures.map((picture) => {
       this.imgs.push(picture.picture);
@@ -109,5 +117,19 @@ h1 {
   width: 370px;
   margin: 10px 0;
   padding: 0 15px;
+}
+
+@media (max-width: 1300px) {
+  .main_pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pictures {
+    width: 400px;
+    margin: 10px 0;
+    padding: 0 15px;
+  }
 }
 </style>
