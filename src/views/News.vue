@@ -16,9 +16,17 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
+
 import NewsCard from "../components/NewsCard.vue"
 import { news } from "../content/news.js";
 export default {
+  setup(){
+    useMeta({
+      title: 'Noticias',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
   components: {NewsCard},
   data() {
     return {

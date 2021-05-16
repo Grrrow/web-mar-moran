@@ -27,6 +27,9 @@ export const messages = {
             title: "Next Events",
             showMore: "Show More"
         },
+        videos: {
+            title: "Videos"
+        },
         contact:{
             title: "Contact",
             manager: "Manager",
@@ -68,6 +71,9 @@ export const messages = {
         },
         news: {
             title: "Noticias"
+        },
+        videos: {
+            title: "Videos"
         },
         contact:{
             title: "Contact",

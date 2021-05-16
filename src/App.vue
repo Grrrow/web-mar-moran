@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{ content ? `Mar Moran - Soprano | ${content}` : `Mar Moran - Soprano` }}</template>
+  </metainfo>
   <Header/>
   <main id="page-wrap">
     <router-view />
@@ -6,8 +9,13 @@
 </template>
 
 <script setup>
-import Header from './components/Header.vue'
+import { useMeta } from 'vue-meta'
 
+import Header from './components/Header.vue'
+  useMeta({
+    title: 'Mar Moran - Soprano',
+    htmlAttrs: { lang: 'en', amp: true }
+  })
 </script>
 
 <style>
