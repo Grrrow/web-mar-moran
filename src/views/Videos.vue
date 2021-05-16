@@ -134,7 +134,7 @@ h1 {
     flex-wrap: wrap;
   }
   .videos {
-    width: 600px;
+    width: 400px;
     margin: 10px 0;
     padding: 0 15px;
   }

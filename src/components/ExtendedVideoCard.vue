@@ -21,12 +21,10 @@ export default {
 iframe{
   width: 100%;
   height: 500px;
-
   background-color: #292929;
 }
 .content {
   padding: 25px 15px;
-  height: 200px;
   background-color: #292929;
 }
 p{
