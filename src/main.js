@@ -8,6 +8,9 @@ import { createMetaManager } from 'vue-meta'
 
 import {messages}  from './traductions/locale.js'
 import VueEasyLightBox from "vue-easy-lightbox";
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+
 const i18n = createI18n({
     locale: 'es', // set locale
     messages, 

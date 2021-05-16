@@ -5,7 +5,7 @@
             <div class="menu-desktop">
                 <router-link class="link" to="/">Home</router-link>
                 <router-link class="link" to="photos">{{ $t('header.photo') }}</router-link>
-                <router-link class="link" to="">{{ $t('header.music') }}</router-link>
+                <router-link class="link" to="music">{{ $t('header.music') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.video') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.biography') }}</router-link>
                 <router-link class="link" to="">{{ $t('header.contact') }}</router-link>
@@ -35,13 +35,13 @@
 import { Slide } from 'vue3-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
 
 export default {
-    components: {
-        Slide // Register your component
-    },
-    mounted(){
-      document.querySelector(".bm-burger-button").style="right: 25px; left: inherit; top: 16px;"
-      Array.from(document.querySelectorAll('.bm-burger-bars')).map( (item, index) => item.style =`background-color: #ffff; top:${index * 12}px`)
-    }
+  components: {
+      Slide // Register your component
+  },
+  mounted(){
+    document.querySelector(".bm-burger-button").style="right: 25px; left: inherit; top: 16px;"
+    Array.from(document.querySelectorAll('.bm-burger-bars')).map( (item, index) => item.style =`background-color: #ffff; top:${index * 12}px`)
+  }
 }
 </script>
 <style scoped>
