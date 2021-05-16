@@ -16,10 +16,14 @@ const i18n = createI18n({
     messages, 
 })
 
-const app = createApp(App);
-app.use(i18n)
-app.use(VueEasyLightBox)
+const app = createApp(App)
+.use(router)
+.use(i18n)
+.use(VueEasyLightBox)
 //app.use(VueReCaptcha, { 
 //    siteKey: '<key>'})
-.use(createMetaManager()) // add this line
-app.use(router).mount('#app')
+.use(createMetaManager())
+
+
+await router.isReady() // add this line
+app.mount('#app')

@@ -1,8 +1,5 @@
 
 <template>
-  <metainfo>
-    <template v-slot:title="{ content }">{{ content }} - Yay!</template>
-  </metainfo>
   <div>
     <Hero />
     <Biography />
@@ -12,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { useMeta } from 'vue-meta'
 
 import Hero from '../components/Hero.vue'
@@ -20,10 +17,22 @@ import Biography from '../components/Biography.vue'
 import News from '../components/News.vue'
 import Events from '../components/Events.vue'
 import Contact from '../components/Contact.vue'
-useMeta({
-  title: 'Mar Moran - Soprano | Home',
-  htmlAttrs: { lang: 'en', amp: true }
-})
+
+export default {
+  setup(){
+    useMeta({
+      title: 'Mar Moran - Soprano | Home',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
+  components: {
+    Hero,
+    Biography,
+    News,
+    Events,
+    Contact
+  }
+}
 </script>
 
 <style>
