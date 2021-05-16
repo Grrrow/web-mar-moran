@@ -8,7 +8,7 @@
       :gap="3"
       :slide-ratio="1 / 2"
       :dragging-distance="200"
-      :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+      :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
     <vueper-slide v-for="i in sliderContent" :key="i" :image="i.url">
       <template v-slot:content>

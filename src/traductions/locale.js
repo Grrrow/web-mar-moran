@@ -29,6 +29,18 @@ export const messages = {
         },
         videos: {
             title: "Videos"
+        },
+        contact:{
+            title: "Contact",
+            manager: "Manager",
+            form: {
+                name: "Your name",
+                email: "Your email",
+                message: "Message",
+                send: "Send",
+                error: "There was a problem, try again",
+                success: "Message sent correctly, we will reply as soon as possible."
+            }
         }
     },
     es: {
@@ -62,6 +74,18 @@ export const messages = {
         },
         videos: {
             title: "Videos"
+        },
+        contact:{
+            title: "Contact",
+            manager: "Representante",
+            form: {
+                name: "Tu nombre",
+                email: "Tu correo electrónico",
+                message: "Mensaje",
+                send: "Enviar",
+                error: "Hubo un problema, intentelo de nuevo",
+                success: "Mensaje enviado correctamente, le contestaremos lo antes posible."
+            }
         }
     }
 }
