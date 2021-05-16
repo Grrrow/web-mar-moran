@@ -23,7 +23,4 @@ const app = createApp(App)
 //app.use(VueReCaptcha, { 
 //    siteKey: '<key>'})
 .use(createMetaManager())
-
-
-await router.isReady() // add this line
 app.mount('#app')
