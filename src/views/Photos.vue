@@ -104,7 +104,7 @@ export default {
   margin: 0 auto;
   padding: 2rem;
 }
-.header {
+h1 {
   padding: 0 35px;
   text-align: left;
 }
@@ -118,6 +118,7 @@ export default {
   margin: 10px 0;
   padding: 0 15px;
 }
+
 @media (max-width: 1300px) {
   .main_pictures {
     display: flex;
