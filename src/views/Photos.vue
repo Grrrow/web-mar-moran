@@ -43,6 +43,9 @@ export default {
       this.imgs.push(picture.picture);
     });
     console.log(process.env.VUE_APP_EXAMPLE)
+    console.log(process.env.VUE_APP_EXAMPLE2)
+    console.log(process)
+
   },
   data() {
     return {
