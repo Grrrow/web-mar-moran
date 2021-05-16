@@ -127,7 +127,8 @@ h1 {
     flex-wrap: wrap;
   }
   .pictures {
-    width: 400px;
+
+    width: 420px;
     margin: 10px 0;
     padding: 0 15px;
   }
