@@ -15,7 +15,8 @@
                     <input required type="text" v-model="name" name="name" :placeholder="$t('contact.form.name')" />
                     <input required type="text" v-model="email" name="email" :placeholder="$t('contact.form.email')" />
                     <textarea required name="message" v-model="message" id="" :placeholder="$t('contact.form.message')" cols="30" rows="10"></textarea>
-                    <input type="submit" :value="$t('contact.form.send')" class="next action-button" />
+                    <button class="captcha" @click="recaptcha">Execute recaptcha</button>
+                    <input type="submit" :disabled="token.length === 0" :value="$t('contact.form.send')" class="next action-button" />
                 </fieldset>
                 <div class="feedback-text">
                     <div v-if="error" class="feedback-text__error"> {{ $t('contact.form.error') }} </div>
@@ -40,7 +41,8 @@
                 name: '',
                 message: '',
                 success: false,
-                error: false
+                error: false,
+                token: ''
             }
         },
         methods: {
@@ -62,6 +64,12 @@
                     console.log('FAILED...', error);
                     this.error = true;
                 });*/
+            },
+            async recaptcha(){
+                // (optional) Wait until recaptcha has been loaded.
+                await this.$recaptchaLoaded()
+                this.token = await this.$recaptcha('login')
+                console.log(this.token)
             },
             resetForm(){
                 this.name="";
@@ -151,6 +159,10 @@
         padding: 10px 5px;
         margin: 10px 5px;
         transition: 0.3s;
+    }
+    #msform .action-button[disabled]{
+        background: grey;
+        pointer-events: none;
     }
       #msform .action-button:hover, #msform .action-button:focus{
           color: #2c3e50;
