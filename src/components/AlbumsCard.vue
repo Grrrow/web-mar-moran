@@ -14,7 +14,7 @@
         </div>
         <img class="cd" :class="{ spin: playing }" src="src/assets/images/music/vinyl.png" alt=""/>
       </div>
-      <div v-if="controls">
+      <div :class="{controlhidden: !controls, showcontrols: controls}">
         <p class="subtitle">{{mtitle}}</p>
         <p class="subtitle">{{album.soprano}} y {{album.piano}}</p>
         <div class="audiocontent">
@@ -72,6 +72,7 @@ export default {
       mtitle: '',
       music: '',
       current: 0,
+      controls: false,
       currentTrack: 0,
       time: '00:00',
       slider: '',
@@ -222,6 +223,13 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
   z-index: 3;
   cursor: pointer;
+}
+
+.controlhidden{
+  display: none;
+}
+.showcontrols{
+  display: block ;
 }
 .audio_controls{
   display:flex; 
