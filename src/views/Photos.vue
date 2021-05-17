@@ -42,10 +42,6 @@ export default {
     this.pictures.map((picture) => {
       this.imgs.push(picture.picture);
     });
-    console.log(process.env.VUE_APP_EXAMPLE)
-    console.log(process.env.VITE_APP_EXAMPLE)
-    console.log(process)
-
   },
   data() {
     return {
@@ -118,7 +114,7 @@ h1 {
   flex-wrap: wrap;
 }
 .pictures {
-  width: 370px;
+  width: 30%;
   margin: 10px 0;
   padding: 0 15px;
 }
@@ -131,8 +127,7 @@ h1 {
     flex-wrap: wrap;
   }
   .pictures {
-
-    width: 420px;
+    width: 100%;
     margin: 10px 0;
     padding: 0 15px;
   }
