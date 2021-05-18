@@ -4,6 +4,7 @@ import News from './views/News.vue';
 import Photos from './views/Photos.vue';
 import Videos from './views/Videos.vue';
 import Music from './views/Music.vue';
+import Biography from './views/Biography.vue';
 import { useMeta } from 'vue-meta'
 
 const routes = [
@@ -31,7 +32,12 @@ const routes = [
 		path: '/music',
 		name: 'Music',
 		component: Music,
-	}
+	},
+	{
+		path: '/biography',
+		name: 'Biography',
+		component: Biography,
+	},
 ];
 
 const router = createRouter({
