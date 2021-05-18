@@ -1,11 +1,31 @@
 <template>
     <div class="biography">
         <div class="container">
-            <div class="photo">
-                <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
+            <div :class="{photofull: full, photo: !full}">
+                <img v-if="full" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
+                <img v-else class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
-            <div class="content">
-                <div class="text">
+            <div class="content" :class="{margincontent: !full}">
+                <div v-if="full" class="text">
+                    <h1 class="title">{{ $t('biography.title') }}</h1>
+                    <p>{{ $t('biography.full.paragraph1') }}</p>
+                    <p>{{ $t('biography.full.paragraph2') }}</p>
+                    <p>{{ $t('biography.full.paragraph3') }}</p>
+                    <p>{{ $t('biography.full.paragraph4') }}</p>
+                    <p>{{ $t('biography.full.paragraph5') }}</p>
+                    <p>{{ $t('biography.full.paragraph6') }}</p>
+                    <p>{{ $t('biography.full.paragraph7') }}</p>
+                    <p>{{ $t('biography.full.paragraph8') }}</p>
+                    <p>{{ $t('biography.full.paragraph9') }}</p>
+                    <p>{{ $t('biography.full.paragraph10') }}</p>
+                    <p>{{ $t('biography.full.paragraph11') }}</p>
+                    <p>{{ $t('biography.full.paragraph12') }}</p>
+                    <p>{{ $t('biography.full.paragraph13') }}</p>
+                    <div class="sign">
+                        <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
+                    </div>
+                </div>
+                <div v-else class="text">
                     <h1 class="title">{{ $t('biography.title') }}</h1>
                     <p><i class="quote">{{ $t('biography.resume.paragraph1') }}</i></p>
                     <p>{{ $t('biography.resume.paragraph2') }}</p>
@@ -23,6 +43,11 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    props:['full']
+}
+</script>
 <style scoped>
 .biography{
     display: flex;
@@ -33,7 +58,6 @@
 }
 .container{
     max-width: var(--app-max-width);
-    margin: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +70,9 @@
     max-width: 460px;
     justify-content: center;
     margin-left: 2rem;
+}
+.margincontent{
+    margin: 5rem
 }
 .content .title{
     font-family: "Changa", sans-serif;
@@ -67,6 +94,13 @@
     font-weight: 400;
     line-height: 25px;
 }
+.photofull{
+    width: 486px;
+    height: 765px;;
+    border: 1px solid #ffff;
+    padding: 2rem;
+    position: relative;
+}
 .photo{
     width: 526px;
     height: 365px;;
@@ -84,11 +118,17 @@
 .sign img{
     height: 40px;
 }
-.photo img{
+.picture{
     width: 560px;
     position: absolute;
     left: 2rem;
-    top: 1rem;
+    top: 2rem;
+}
+.photofull img{
+    width: 560px;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
 }
 @media (max-width: 1240px) {
     .container {
