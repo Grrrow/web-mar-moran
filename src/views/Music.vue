@@ -187,7 +187,7 @@ export default {
   flex-wrap: wrap;
 }
 .pictures {
-  width: 330px;
+  width: 30%;
   margin: 10px 0;
   padding: 0 15px;
 }
@@ -199,7 +199,20 @@ export default {
     flex-wrap: wrap;
   }
   .pictures {
-    width: 330px;
+    width: 40%;
+    margin: 10px 0;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 700px) {
+  .main_pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .pictures {
+    width: 90%;
     margin: 10px 0;
     padding: 0 15px;
   }
