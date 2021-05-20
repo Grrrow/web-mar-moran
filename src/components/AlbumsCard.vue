@@ -5,7 +5,7 @@
         <audio :id="`${source}${id}`">
           <source :id="`${source}${id}`" :src="source" type="audio/mpeg" />
         </audio>
-        <img :class="`album ${playing ? 'goleft' : ''}`" :src="album.cover" alt=""/>
+        <img :class="`album ${playing ? 'goleft' : ''}`" src="../assets/images/music/lunaclara.jpeg" alt=""/>
         <img :class="`needle ${playing ? 'visible' : ''}`" src="../assets/images/music/needle.png" alt=""/>
         <div v-if="!controls">
           <div class="control" @click="playMusic" v-if="!playing">
