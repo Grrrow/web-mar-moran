@@ -25,7 +25,7 @@ export default {
       albums: [
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
@@ -48,7 +48,7 @@ export default {
         },
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
@@ -71,7 +71,7 @@ export default {
         },
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
@@ -94,7 +94,7 @@ export default {
         },
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
@@ -117,7 +117,7 @@ export default {
         },
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
@@ -140,7 +140,7 @@ export default {
         },
         {
           title: 'Luna Clara',
-          cover: 'src/assets/images/music/lunaclara.jpeg',
+          cover: '../assets/images/music/lunaclara.jpeg',
           soprano: 'Mar Morán',
           piano: 'Aurelio Viribay',
           spotify: 'https://open.spotify.com/album/0lRQXLzG8iJ8rt6E4PEasU?si=KXJTiDk6Svu78dFlwaVeJQ',
