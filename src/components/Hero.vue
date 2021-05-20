@@ -2,7 +2,7 @@
   <div class="slider">
     <vueper-slides
       class="no-shadow"
-      autoplay 
+      :autoplay= "sliderList.length > 0" 
       :visible-slides="1"
       slide-multiple
       :gap="1"
@@ -34,7 +34,7 @@ export default {
       sliderList: []
     }
   },
-  async mounted() {
+  async created() {
     this.sliderList = await sliderContent()
   }
 

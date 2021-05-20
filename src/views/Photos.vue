@@ -30,6 +30,7 @@
 import { useMeta } from 'vue-meta'
 
 import PhotosCard from "../components/PhotosCard.vue";
+import getPictures from '../content/getPictures.js'
 export default {
   components: { PhotosCard },
   setup(){
@@ -39,48 +40,21 @@ export default {
     })
   },
   mounted() {
-    this.pictures.map((picture) => {
-      this.imgs.push(picture.picture);
-    });
+
   },
   data() {
     return {
       imgs: [],
       visible: false,
       index: 0,
-      pictures: [
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/IMG_6759-1170x780.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/9CA1551A-EE1E-456E-BCCF-2557684F7C33-775x517.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/IMG_6759-1170x780.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/IMG_6759-1170x780.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/IMG_6759-1170x780.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-        {
-          picture:
-            "https://marmoransoprano.es/wp-content/uploads/2017/11/IMG_6759-1170x780.jpg",
-          text: "Concert at the Juan March Foundation – Madrid",
-        },
-      ],
+      pictures: [],
     };
+  },
+  async created() {
+    this.pictures = await getPictures()
+    this.pictures.map((picture) => {
+      this.imgs.push(picture.imageUrl);
+    });
   },
   methods: {
     show(index) {
