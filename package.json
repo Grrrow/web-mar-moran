@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "node ./create-env.js && vite build && cat $CONTEXT",
+    "build": "node ./create-env.js && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
