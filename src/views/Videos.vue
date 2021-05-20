@@ -18,9 +18,16 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
 import VideosCard from "../components/VideosCard.vue";
 import ExtendedVideoCard from "../components/ExtendedVideoCard.vue";
 export default {
+  setup(){
+    useMeta({
+      title: 'Videos',
+      htmlAttrs: { lang: 'es', amp: true }
+    })
+  },
   components: { VideosCard, ExtendedVideoCard },
   data() {
     return {

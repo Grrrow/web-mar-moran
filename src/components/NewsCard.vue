@@ -1,11 +1,11 @@
 <template>
   <div class="padding_20">
-    <a :href="article.url">
-      <img :src="article.img" alt="" />
-      <p v-text="article.text"></p>
+    <a :href="article.link">
+      <img :src="article.imageUrl" alt="" />
+      <p v-text="article.title"></p>
     </a>
-    <div class="source" v-if="article.source">
-      <img :src="article.source" alt="" />
+    <div class="source" v-if="article.iconUrl">
+      <img :src="article.iconUrl" alt="" />
     </div>
   </div>
 </template>

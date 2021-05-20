@@ -19,7 +19,7 @@
 import { useMeta } from 'vue-meta'
 
 import NewsCard from "../components/NewsCard.vue"
-import { news } from "../content/news.js";
+//import { news } from "../content/news.js";
 export default {
   setup(){
     useMeta({

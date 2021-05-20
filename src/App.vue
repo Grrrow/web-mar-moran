@@ -1,6 +1,6 @@
 <template>
   <metainfo>
-    <template v-slot:title="{ content }">{{ content ? `Mar Moran - Soprano | ${content}` : `Mar Moran - Soprano` }}</template>
+    <template v-slot:title="{ content }">{{ content ? `${content} | Mar Moran - Soprano ` : `Mar Moran - Soprano` }}</template>
   </metainfo>
   <Header/>
   <main id="page-wrap">

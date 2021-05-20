@@ -5,17 +5,17 @@
       autoplay 
       :visible-slides="1"
       slide-multiple
-      :gap="3"
-      :slide-ratio="1 / 2"
+      :gap="1"
+      :slide-ratio="1/1.5"
       :dragging-distance="200"
       :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
-    <vueper-slide v-for="i in sliderContent" :key="i" :image="i.url">
+    <vueper-slide v-for="slider in sliderList" :key="slider.id" :image="slider.url">
       <template v-slot:content>
         <div>
-          <div :class="`text ${i.text.position}`">
-            <h1>{{ i.text.title }}</h1>
-            <p class="description">{{ i.text.description }}</p>
+          <div :class="`text ${slider.position}`">
+            <h1>{{ slider.title }}</h1>
+            <p class="description">{{ slider.Description }}</p>
           </div>
         </div>
       </template>
@@ -23,11 +23,22 @@
   </vueper-slides>
   </div>
 </template>
-<script setup>
-import { defineProps, reactive } from "vue";
+<script>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
-import { sliderContent } from "../content/slider-content.js";
+import  sliderContent  from "../content/slider-content.js";
+export default {
+  components: {VueperSlides, VueperSlide},
+  data() {
+    return{
+      sliderList: []
+    }
+  },
+  async mounted() {
+    this.sliderList = await sliderContent()
+  }
+
+}
 
 </script>
 <style scoped>
