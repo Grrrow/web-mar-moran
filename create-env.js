@@ -1,4 +1,8 @@
 const fs = require('fs')
-fs.writeFileSync('./.env', `VITE_APP_EXAMPLE=${process.env.VITE_APP_EXAMPLE}\n`)
-console.log(process.env.VITE_APP_EXAMPLE)
-console.log(process.env.VUE_APP_EXAMPLE)
+fs.writeFileSync('./.env', 
+`VITE_APP_CAPTCHATOKEN=${process.env.VITE_APP_CAPTCHATOKEN}\n
+VITE_APP_EMAILJS_SERVICEID=${process.env.VITE_APP_EMAILJS_SERVICEID}\n
+VITE_APP_EMAILJS_TEMPLATEID=${process.env.VITE_APP_EMAILJS_TEMPLATEID}\n
+VITE_APP_CAPTCHATOKEN=${process.env.VITE_APP_CAPTCHATOKEN}\n
+VITE_APP_EMAILJS_TOKEN=${process.env.VITE_APP_EMAILJS_TOKEN}\n
+VITE_APP_EMAILJS_USERID=${process.env.VITE_APP_EMAILJS_USERID}\n`)
