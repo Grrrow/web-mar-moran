@@ -100,7 +100,7 @@ h1 {
   will-change: transform opacity;
   width: 70%;
 }
-@media (max-width: 1300px) {
+@media (max-width: 800px) {
   .main_videos {
     display: flex;
     flex-direction: column;
@@ -108,9 +108,24 @@ h1 {
     flex-wrap: wrap;
   }
   .videos {
-    width: 400px;
-    margin: 10px 0;
-    padding: 0 15px;
+    width: 100%;
+  }
+
+  .expanded_div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    -webkit-transform: translate(-50% -50%);
+    transform: translate(-50% -50%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    will-change: transform opacity;
+    width: 70%;
   }
 }
 </style>

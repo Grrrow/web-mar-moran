@@ -150,6 +150,16 @@ export default {
         top: 10px;
         left: 1rem;
     }
+        .photofull {
+        width: 200px;
+        height: 300px;
+    }
+    .photofull img {
+        width: 250px;
+        top: 1rem;
+        left: 1rem;
+        position:absolute;
+    }
     .content{
         margin-left: 0;
     }
