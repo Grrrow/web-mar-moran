@@ -21,7 +21,7 @@ import Contact from '../components/Contact.vue'
 export default {
   setup(){
     useMeta({
-      title: 'Mar Moran - Soprano | Home',
+      title: 'Home',
       htmlAttrs: { lang: 'en', amp: true }
     })
   },

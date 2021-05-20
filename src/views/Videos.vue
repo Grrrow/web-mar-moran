@@ -18,53 +18,27 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta'
 import VideosCard from "../components/VideosCard.vue";
 import ExtendedVideoCard from "../components/ExtendedVideoCard.vue";
+import getVideos from '../content/getVideos.js'
 export default {
+  setup(){
+    useMeta({
+      title: 'Videos',
+      htmlAttrs: { lang: 'es', amp: true }
+    })
+  },
   components: { VideosCard, ExtendedVideoCard },
   data() {
     return {
       showExpanded: false,
-      videos: [
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The Spheres» en Montesilvano, Pescara, Italia. Mar Morán, Soprano. Aurelio Viribay, Pianista.(https://www.youtube.com/channel/UCNkG…). Marcello MalavideoExpandeda, Ingeniero de sonido. (c) Tommaso Tuzj – Odradek Records, Imagen. Clizia Tonelli, Maquillaje. Jenny Cirulli, Peluquería.",
-        },
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The...",
-        },
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The...",
-        },
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The...",
-        },
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The...",
-        },
-        {
-          src: "https://www.youtube.com/embed/O2qPE_-Wto8",
-          title: "Making-of «Luna Clara»",
-          description:
-            "En este video se muestra el como se hizo el CD «Luna Clara» con el sello discografico «Odradek records» en su estudio «The...",
-        },
-      ],
+      videos: [],
       videoExpanded: [],
     };
+  },
+  async created(){
+    this.videos = await getVideos()
   },
   methods: {
     expand(video) {

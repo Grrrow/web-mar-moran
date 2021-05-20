@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="padding_20">
-      <img :src="picture.picture" alt="" style="width: 100%" />
+      <img :src="picture.imageUrl" alt="" style="width: 100%" />
       <div class="plus">
         <a href="#">+</a>
       </div>
-      <div class="centered">{{ picture.text }}</div>
+      <div class="centered">{{ picture.title }}</div>
     </div>
   </div>
 </template>

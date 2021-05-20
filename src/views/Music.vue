@@ -18,7 +18,14 @@
 
 <script>
 import AlbumsCard from "../components/AlbumsCard.vue";
+import { useMeta } from 'vue-meta'
 export default {
+  setup(){
+    useMeta({
+      title: 'Musica',
+      htmlAttrs: { lang: 'es', amp: true }
+    })
+  },
   components: { AlbumsCard },
   data() {
     return {

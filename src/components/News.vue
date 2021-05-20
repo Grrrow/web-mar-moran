@@ -14,7 +14,7 @@
         500: { visibleSlides: 2, slideMultiple: 2 },
         900: { visibleSlides: 3, slideMultiple: 2 }  }"
       >
-        <vueper-slide v-for="(article, index) in news" :key="index">
+        <vueper-slide v-for="(article, index) in newsList" :key="index">
           <template v-slot:content>
             <NewsCard :article="article" />
           </template>
@@ -24,11 +24,24 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import NewsCard from "./NewsCard.vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
-import { news } from "../content/news.js";
+import news  from "../content/news.js";
+export default {
+  components: {VueperSlides, VueperSlide, NewsCard},
+  data() {
+    return{
+      newsList: []
+    }
+  },
+  async mounted() {
+    this.newsList = await news()
+    console.log(this.newsList)
+  }
+
+}
 </script>
 
 <style scoped>
