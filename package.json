@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && echo $CONTEXT > public/netlify-context.txt",
+    "build": "node ./scripts/create-env.js && vite build && echo $CONTEXT",
     "serve": "vite preview"
   },
   "dependencies": {
