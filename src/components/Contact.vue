@@ -28,7 +28,6 @@
 </template>
 <script>
     import emailjs from 'emailjs-com'
-///    import credentials from '../credentials'
     import SocialBanner from './SocialBanner.vue'
     
     export default {
@@ -49,8 +48,8 @@
             sendEmail(e) {
                  this.success = false;
                  this.error = false
-              /*  emailjs.init(credentials.emailjs.userId)
-            emailjs.send(credentials.emailjs.serviceId, credentials.emailjs.templateId,
+            emailjs.init(import.meta.env.VITE_APP_EMAILJS_USERID)
+            emailjs.send(import.meta.env.VITE_APP_EMAILJS_SERVICEID, import.meta.env.VITE_APP_EMAILJS_TEMPLATEID,
             {
                 from_name: this.name,
                 to_name: "Web Mar Moran Soprano",
@@ -63,13 +62,12 @@
                 }, (error) => {
                     console.log('FAILED...', error);
                     this.error = true;
-                });*/
+                });
             },
             async recaptcha(){
                 // (optional) Wait until recaptcha has been loaded.
                 await this.$recaptchaLoaded()
                 this.token = await this.$recaptcha('login')
-                console.log(this.token)
             },
             resetForm(){
                 this.name="";

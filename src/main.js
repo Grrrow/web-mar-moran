@@ -20,7 +20,7 @@ const app = createApp(App)
 .use(router)
 .use(i18n)
 .use(VueEasyLightBox)
-//app.use(VueReCaptcha, { 
-//    siteKey: '<key>'})
+app.use(VueReCaptcha, { 
+    siteKey: import.meta.env.VITE_APP_CAPTCHATOKEN})
 .use(createMetaManager())
 app.mount('#app')
