@@ -2,23 +2,23 @@
   <div class="maindiv">
     <div class="divrelative">
       <div class="album_content">
-        <audio :id="'song' + id">
-          <source :id="'source'+id" :src="source" type="audio/mpeg" />
+        <audio :id="`${source}${id}`">
+          <source :id="`${source}${id}`" :src="source" type="audio/mpeg" />
         </audio>
-        <img class="album" :class="{ goleft: playing }" :src="album.cover" alt=""/>
-        <img class="needle" :class="{ visible: playing }" src="../assets/images/music/needle.png" alt=""/>
+        <img :class="`album ${playing ? 'goleft' : ''}`" :src="album.cover" alt=""/>
+        <img :class="`needle ${playing ? 'visible' : ''}`" src="../assets/images/music/needle.png" alt=""/>
         <div v-if="!controls">
-          <div class="control" @click="playMusic()" v-if="!playing">
+          <div class="control" @click="playMusic" v-if="!playing">
              <i class="fa fa-play"></i>
           </div>
         </div>
-        <img class="cd" :class="{ spin: playing }" src="../assets/images/music/vinyl.png" alt=""/>
+        <img :class="`cd ${playing ? 'spin' : ''}`" src="../assets/images/music/vinyl.png" alt=""/>
       </div>
-      <div :class="{controlhidden: !controls, showcontrols: controls}">
+      <div v-if="controls">
         <p class="subtitle">{{mtitle}}</p>
         <p class="subtitle">{{album.soprano}} y {{album.piano}}</p>
         <div class="audiocontent">
-          <input class="slider" :id="'slider' + id" type="range" min="0" :max="music.duration" v-model="current"/>
+          <input class="slider" :id="`slider${id}`" type="range" min="0" :max="music.duration" v-model="current"/>
           <p style="color: white; width: 20%">{{ time }}</p>
         </div>
         <div class="audio_controls">

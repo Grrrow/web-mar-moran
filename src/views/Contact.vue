@@ -2,7 +2,7 @@
 <template>
   <div class="main">
     <div class="container">
-      <Biography :full="true" />
+      <Contact />
     </div>
   </div>
 </template>
@@ -10,13 +10,13 @@
 <script>
 import { useMeta } from 'vue-meta'
 
-import Biography from "../components/Biography.vue";
+import Contact from "../components/Contact.vue";
 export default {
-  components: { Biography },
+  components: { Contact },
   setup(){
     useMeta({
-      title: 'Biografia',
-      htmlAttrs: { lang: 'es', amp: true }
+      title: 'Contacto',
+      htmlAttrs: { lang: 'en', amp: true }
     })
   },
   data() {

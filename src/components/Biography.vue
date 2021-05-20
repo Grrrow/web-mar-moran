@@ -52,6 +52,7 @@ export default {
 .biography{
     display: flex;
     justify-content: center;
+    padding: 4rem 0;
 }
 .link{
     text-decoration: underline;

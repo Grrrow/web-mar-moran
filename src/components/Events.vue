@@ -26,12 +26,13 @@ import EventCard from './EventCard.vue'
     min-height: 100vh;
     margin-bottom: 2rem;
 }
-.container{
+.events .container{
     max-width: var(--app-max-width);
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem;   
+    padding: 2rem;
+    box-sizing: border-box;   
     display: flex;
     flex-direction: column
 }

@@ -5,6 +5,8 @@ import Photos from './views/Photos.vue';
 import Videos from './views/Videos.vue';
 import Music from './views/Music.vue';
 import Biography from './views/Biography.vue';
+import Contact from './views/Contact.vue';
+
 import { useMeta } from 'vue-meta'
 
 const routes = [
@@ -37,6 +39,11 @@ const routes = [
 		path: '/biography',
 		name: 'Biography',
 		component: Biography,
+	},
+	{
+		path: '/contact',
+		name: 'Contact',
+		component: Contact,
 	},
 ];
 
