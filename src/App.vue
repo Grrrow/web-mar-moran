@@ -12,7 +12,7 @@
 import { useMeta } from 'vue-meta'
 
 import Header from './components/Header.vue'
-  console.log("HOla", process.env.VITE_APP_EXAMPLE)
+  console.log("HOla", import.meta.env.VITE_APP_EXAMPLE)
   useMeta({
     title: 'Mar Moran - Soprano',
     htmlAttrs: { lang: 'en', amp: true }
