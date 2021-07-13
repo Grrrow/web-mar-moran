@@ -1,0 +1,22 @@
+.vc-container.vc-is-expanded {
+    border-radius: 0;
+    background-color: #222;
+    border: 0;
+}
+.vc-title {
+    color: white !important;
+}
+.vc-day{
+    background-color: white !important;
+    /* border: red 2px solid; */
+    padding: 5px;
+
+}
+.vc-weekday {
+    background-color: #dd4377;
+    padding: 10px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: white !important;
+    text-transform: uppercase;
+}

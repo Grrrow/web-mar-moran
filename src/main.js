@@ -8,6 +8,7 @@ import { createMetaManager } from 'vue-meta'
 
 import {messages}  from './traductions/locale.js'
 import VueEasyLightBox from "vue-easy-lightbox";
+import VCalendar from 'v-calendar';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 
@@ -20,6 +21,7 @@ const app = createApp(App)
 .use(router)
 .use(i18n)
 .use(VueEasyLightBox)
+.use(VCalendar, {})
 app.use(VueReCaptcha, { 
     siteKey: import.meta.env.VITE_APP_CAPTCHATOKEN})
 .use(createMetaManager())
