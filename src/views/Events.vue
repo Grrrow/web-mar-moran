@@ -27,12 +27,12 @@ import EventCalendar from '../components/EventCalendar.vue'
 import '../assets/styles/Calendar.css'
 
 export default {
-  // setup() {
-  //   useMeta({
-  //     title: 'Eventos',
-  //     htmlAttrs: { lang: 'es', amp: true },
-  //   })
-  // },
+  setup() {
+    useMeta({
+      title: 'Eventos',
+      htmlAttrs: { lang: 'es', amp: true },
+    })
+  },
   components: { EventCalendar },
   created() {
     this.todos.sort((a, b) => {
