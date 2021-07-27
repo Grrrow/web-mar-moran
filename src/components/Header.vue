@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <router-link to="/"><img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></router-link>
+            <router-link class="logo" to="/"><img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign-300x38-1.png" alt="Mar Morán"></router-link>
             <div class="menu-desktop">
                 <router-link class="link" to="/">Home</router-link>
                 <router-link class="link" to="photos">{{ $t('header.photo') }}</router-link>
@@ -54,6 +54,12 @@ header{
     display: flex;
     justify-content: center;
 
+}
+.logo {
+  max-width: 50%;
+}
+.logo img{
+  width: 100%;
 }
 .container{
     max-width: var(--app-max-width);

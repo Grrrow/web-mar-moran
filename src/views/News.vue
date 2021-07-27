@@ -82,4 +82,21 @@ input {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 960px) {
+  .cards {
+    width: 45%;
+  }
+  input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 660px) {
+  .cards {
+    width: 100%;
+  }
+  input{
+    width: 100%;
+  }
+}
 </style>

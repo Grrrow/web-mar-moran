@@ -64,6 +64,9 @@ export const messages = {
     videos: {
       title: 'Videos',
     },
+    photos:{
+      title: "photos"
+    },
     contact: {
       title: 'Contact',
       manager: 'Manager',
@@ -135,6 +138,9 @@ export const messages = {
     events: {
       title: 'Próximos eventos',
       showMore: 'Ver Más',
+    },
+    photos:{
+      title: "Fotos"
     },
     news: {
       title: 'Noticias',

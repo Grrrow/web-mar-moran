@@ -41,28 +41,6 @@
                 </div>
             </div>
         </div>
-        <div v-else class="text">
-          <h1 class="title">{{ $t("biography.title") }}</h1>
-          <p>
-            <i class="quote">{{ $t("biography.resume.paragraph1") }}</i>
-          </p>
-          <p>{{ $t("biography.resume.paragraph2") }}</p>
-          <p>{{ $t("biography.resume.paragraph3") }}</p>
-          <p>{{ $t("biography.resume.paragraph4") }}</p>
-          <p>{{ $t("biography.resume.paragraph5") }}</p>
-          <div class="sign">
-            <router-link class="link" to="/biography">
-              {{ $t("biography.knowMore") }}
-            </router-link>
-            <img
-              loading="lazy"
-              src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -211,23 +189,8 @@ export default {
   p{
     text-align: left;
   }
-}
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #fff; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #dd4377; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  .content.margincontent{
+      margin: 1rem;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
 <template>
   <div class="main">
     <div class="container">
-      <h1>Música</h1>
+      <h1>{{ $t('music.title') }}</h1>
       <div class="main_albums">
         <div
           v-for="(album, index) in albumsList"

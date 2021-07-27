@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Eventos</h1>
+    <h1>{{ $t('events.title') }}</h1>
     <div class="responsiveCalendar">
       <v-calendar
         :masks="masks"

@@ -65,6 +65,7 @@ export default {
 h3 {
   text-align: left;
   font-size: var(--font-03);
+  color: var(--gray-00);
 }
 @media (max-width: 1330px) {
   .vueperslides--fixed-height.vueperslides--bullets-outside{

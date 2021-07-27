@@ -2,7 +2,7 @@
 <template>
   <div class="main">
     <div class="container">
-      <h1>Fotos</h1>
+      <h1>{{ $t('photos.title') }}</h1>
       <div class="main_pictures">
         <div
           v-for="(picture, index) in picturesList"
