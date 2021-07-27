@@ -23,7 +23,7 @@
 <script>
 import { useMeta } from 'vue-meta'
 import EventCalendar from '../components/EventCalendar.vue'
-
+import { eventsCollection } from '../content/firebase'
 import '../assets/styles/Calendar.css'
 
 export default {
@@ -34,11 +34,11 @@ export default {
     })
   },
   components: { EventCalendar },
-  created() {
-    this.todos.sort((a, b) => {
-      return new Date(a.date) - new Date(b.date)
-    })
-    this.firstEvent = this.todos[0]
+  async created() {
+    const events = await eventsCollection.get()
+    this.eventsList = events.data().eventsList
+    console.log(this.eventsList)
+    this.sortEventsByDate()
   },
   data() {
     return {
@@ -54,64 +54,35 @@ export default {
       firstEvent: [],
       date: new Date(),
       selectedDay: null,
-      todos: [
-        {
-          id: 1,
-          description: 'Concierto en Herrera del Duque',
-          date: new Date('Julio 22, 2021 18:00:00'),
-          isCompleted: false,
-          image:
-            'https://images-na.ssl-images-amazon.com/images/I/9191l6uKADL._SL1500_.jpg',
-          color: 'orange',
-        },
-        {
-          id: 2,
-          description: 'Concierto en Piornal',
-          date: new Date('Julio 12, 2021 18:00:00'),
-          isCompleted: false,
-          image:
-            'https://images-na.ssl-images-amazon.com/images/I/9191l6uKADL._SL1500_.jpg',
-          color: 'pink',
-        },
-        {
-          id: 3,
-          description: 'Concierto en Llerena',
-          date: new Date('Julio 16, 2021 18:00:00'),
-          isCompleted: false,
-          image:
-            'https://images-na.ssl-images-amazon.com/images/I/9191l6uKADL._SL1500_.jpg',
-          color: 'blue',
-        },
-      ],
+      eventsList: [],
     }
   },
   methods: {
     dayClicked(day) {
       this.selectedDay = day
     },
-    formatDate(hour, minute) {
-      if (hour < 10) {
-        hour = '0' + hour
-      }
-      if (minute < 10) {
-        minute = '0' + minute
-      }
-      return hour + ':' + minute
+    sortEventsByDate() {
+      this.eventsList.sort((a, b) => {
+        return new Date(a.date.toDate().toDateString()) - new Date(b.date.toDate().toDateString())
+      })
+      this.firstEvent = this.eventsList[0]
     },
   },
   computed: {
     attributes() {
-      return this.todos.map((event) => ({
-        key: `todo.${event.id}`,
-        dates: event.date,
-        customData: event,
-        image: event.image,
-        highlight: event.color,
-        hour: event.hour,
-        popover: {
-          label: event.description,
-        },
-      }))
+      return this.eventsList.map((event) => {
+        console.log(new Date(event.date.toDate()))
+        return {
+          dates: new Date(event.date.toDate().toDateString()),
+          customData: event,
+          image: event.poster,
+          highlight: event.color,
+          hour: event.hour,
+          popover: {
+            label: event.location,
+          },
+        }
+      })
     },
   },
 }
