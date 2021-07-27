@@ -10,7 +10,7 @@
       :dragging-distance="200"
       :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
-    <vueper-slide v-for="(slider, index) in sliderList.slidesHero" :key="index" :image="slider.url">
+    <vueper-slide v-for="(slider, index) in sliderList.slidesHero" lazy-load-on-drag lazy :key="index" :image="slider.url">
       <template v-slot:content>
         <div>
           <div :class="`text ${slider.position}`">

@@ -2,8 +2,8 @@
     <div class="biography">
         <div class="container">
             <div :class="{photofull: full, photo: !full}">
-                <img v-if="full" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
-                <img v-else class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
+                <img v-if="full" loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
+                <img v-else loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="text">
@@ -36,7 +36,7 @@
                         <router-link class="link" to="/biography">
                             {{ $t('biography.knowMore') }}
                         </router-link>
-                            <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
+                            <img loading="lazy" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
                     </div>
                 </div>
             </div>
