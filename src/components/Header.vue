@@ -8,6 +8,7 @@
                 <router-link class="link" to="videos">{{ $t('header.video') }}</router-link>
                 <router-link class="link" to="music">{{ $t('header.music') }}</router-link>
                 <router-link class="link" to="biography">{{ $t('header.biography') }}</router-link>
+                <router-link class="link" to="events">{{ $t('header.events') }}</router-link>
                 <router-link class="link" to="contact">{{ $t('header.contact') }}</router-link>
                 <router-link class="link" to="news">{{ $t('header.news') }}</router-link>
                 <select v-model="$i18n.locale">
@@ -25,6 +26,7 @@
                 <router-link to="music">{{ $t('header.music') }}</router-link>
                 <router-link to="video">{{ $t('header.video') }}</router-link>
                 <router-link to="biography">{{ $t('header.biography') }}</router-link>
+                <router-link to="events">{{ $t('header.events') }}</router-link>
                 <router-link to="contact">{{ $t('header.contact') }}</router-link>
                 <router-link to="news">{{ $t('header.news') }}</router-link>
             </Slide>
