@@ -101,15 +101,15 @@ export default {
   },
   computed: {
     attributes() {
-      return this.todos.map((t) => ({
-        key: `todo.${t.id}`,
-        dates: t.date,
-        customData: t,
-        image: t.image,
-        highlight: t.color,
-        hour: t.hour,
+      return this.todos.map((event) => ({
+        key: `todo.${event.id}`,
+        dates: event.date,
+        customData: event,
+        image: event.image,
+        highlight: event.color,
+        hour: event.hour,
         popover: {
-          label: t.description,
+          label: event.description,
         },
       }))
     },
