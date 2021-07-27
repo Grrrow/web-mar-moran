@@ -1,7 +1,7 @@
 <template>
-    <div class="biography">
+    <div :class="{biograpy: true, 'full': full}">
         <div class="container">
-            <div :class="{photofull: full, photo: !full}">
+            <div :class="{photofull: full, 'full': !full}">
                 <img v-if="full" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
                 <img v-else class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
@@ -49,11 +49,22 @@ export default {
 }
 </script>
 <style scoped>
-.biography{
+.biograpy{
     display: flex;
     justify-content: center;
     padding: 4rem 0;
 }
+.biograpy.full{
+    padding: 0;
+}
+.biograpy.full .container{
+    position: relative;
+}
+.biograpy.full .container .content{
+    max-width: 100%;
+    justify-content: flex-end;
+}
+
 .link{
     text-decoration: underline;
 }
@@ -94,10 +105,7 @@ export default {
     font-family: Lato, sans-serif;
     color:rgba(255, 255, 255, 0.8);
     text-align: justify;
-    max-width: 610px;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 80vh;
+    max-width: 540px;
 }
 .text p{
     font-size: 16px;
@@ -109,7 +117,8 @@ export default {
     height: 765px;;
     border: 1px solid #ffff;
     padding: 2rem;
-    position: relative;
+    position: fixed;
+    top: 5rem;
 }
 .photo{
     width: 526px;
@@ -141,12 +150,17 @@ export default {
     top: 2rem;
 }
 @media (max-width: 1240px) {
-    .container {
+   .biograpy.full.container, .container {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .content{
-        max-width: var(--app-max-width);
+
+    .photofull{
+        position: relative;
+    }
+    .biograpy.full .container .content{
+                max-width: 500px;
+
     }
 }
 @media (max-width: 650px) {
