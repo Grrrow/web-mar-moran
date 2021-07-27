@@ -19,7 +19,8 @@
 import { useMeta } from 'vue-meta'
 
 import NewsCard from "../components/NewsCard.vue"
-//import { news } from "../content/news.js";
+import { newsCollection } from '../content/firebase'
+
 export default {
   setup(){
     useMeta({
@@ -28,19 +29,24 @@ export default {
     })
   },
   components: {NewsCard},
+  async created() {
+    const news =  await newsCollection.get()
+    this.news = news.data().newsList
+  },
   data() {
     return {
       inputSearch: '',
-      news: news
+      news: []
     };
   },
   computed: {
     filterNews(){
       return this.news.filter((article) => 
-        article.text.toUpperCase().includes(this.inputSearch.toUpperCase())
+        article.title.toUpperCase().includes(this.inputSearch.toUpperCase())
       );
     },
-  }
+  },
+
 };
 </script>
 

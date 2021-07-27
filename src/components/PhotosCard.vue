@@ -5,11 +5,12 @@
       <div class="plus">
         <a href="#">+</a>
       </div>
-      <div class="centered">{{ picture.title }}</div>
+      <div class="centered">{{ picture.title['es'] }}</div>
     </div>
   </div>
 </template>
 <script>
+
 export default {
   props: ['picture'],
 };

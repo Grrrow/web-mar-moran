@@ -3,9 +3,7 @@
     <div class="container">
       <h3 class="title">{{ $t('events.title') }}</h3>
       <div class="event-list">
-          <EventCard />
-          <EventCard />
-          <EventCard />
+          <EventCard v-for="(event, index) in eventsList" :key="index" :event="event" />
       </div>
     </div>
           <router-link class="link" to="/events">{{ $t('events.showMore') }}</router-link>
@@ -13,9 +11,24 @@
   </div>
 </template>
 
-<script setup>
+<script>
+import { eventsCollection } from '../content/firebase'
+
 import EventCard from './EventCard.vue'
 
+export default {
+    components: { EventCard },
+    data() {
+        return {
+            eventsList: []
+        }
+    },
+    async created() {
+        const events =  await eventsCollection.get()
+        this.eventsList = events.data().eventsList
+        console.log(this.eventsList)
+    }
+}
 </script>
 
 <style scoped>

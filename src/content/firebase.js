@@ -20,13 +20,19 @@ const db = firebase.firestore()
 
 // collection references
 const sliderCollection = db.collection('slider').doc('slides')
-const newsCollection = db.collection('news')
-const videosCollection = db.collection('videos')
+const newsCollection = db.collection('slider').doc('news')
+const eventsCollection = db.collection('slider').doc('events')
+const videosCollection = db.collection('slider').doc('videos')
+const picturesCollection = db.collection('slider').doc('pictures')
+const albumsCollection = db.collection('slider').doc('albums')
 
 // export utils/refs
 export {
   db,
   sliderCollection,
   newsCollection,
-  videosCollection
+  eventsCollection,
+  videosCollection,
+  picturesCollection,
+  albumsCollection
 }
