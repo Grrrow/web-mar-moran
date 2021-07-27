@@ -10,7 +10,7 @@
       :dragging-distance="200"
       :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
-    <vueper-slide v-for="slider in sliderList" :key="slider.id" :image="slider.url">
+    <vueper-slide v-for="(slider, index) in sliderList.slidesHero" :key="index" :image="slider.url">
       <template v-slot:content>
         <div>
           <div :class="`text ${slider.position}`">
@@ -26,7 +26,7 @@
 <script>
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
-import  sliderContent  from "../content/slider-content.js";
+import { sliderCollection } from '../content/firebase'
 export default {
   components: {VueperSlides, VueperSlide},
   data() {
@@ -35,7 +35,9 @@ export default {
     }
   },
   async created() {
-    this.sliderList = await sliderContent()
+    const slider =  await sliderCollection.get()
+    this.sliderList = slider.data()
+    console.log(this.sliderList.slidesHero)
   }
 
 }
