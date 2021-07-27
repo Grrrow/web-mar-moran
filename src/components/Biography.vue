@@ -6,7 +6,7 @@
                 <img v-else class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
             <div class="content" :class="{margincontent: !full}">
-                <div v-if="full" class="text">
+                <div v-if="full" class="textfull">
                     <h1 class="title">{{ $t('biography.title') }}</h1>
                     <p>{{ $t('biography.full.paragraph1') }}</p>
                     <p>{{ $t('biography.full.paragraph2') }}</p>
@@ -90,6 +90,15 @@ export default {
     text-align: justify;
     max-width: 610px;
 }
+.textfull{
+    font-family: Lato, sans-serif;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: justify;
+    max-width: 610px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+}
 .text p{
     font-size: 16px;
     font-weight: 400;
@@ -153,5 +162,23 @@ export default {
     .content{
         margin-left: 0;
     }
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dd4377; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>

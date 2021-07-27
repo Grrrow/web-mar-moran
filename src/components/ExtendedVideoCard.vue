@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <iframe :src="video.src" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe :src="video.youtubeLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="content">
       <h4>{{video.title}}</h4>
       <p>{{video.description}}</p>
