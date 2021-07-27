@@ -54,6 +54,7 @@ export default {
     font-weight: normal;
     font-size: 48px;
     color: #FFFF;
+    text-align: center;
 }
 h3{
     text-align: left;
