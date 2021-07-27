@@ -2,8 +2,8 @@
   <div class="maindiv">
     <div class="divrelative">
       <div class="album_content">
-        <audio :id="`${source}${id}`">
-          <source :id="`${source}${id}`" :src="source" type="audio/mpeg" />
+        <audio :id="`${id}`">
+          <source :id="`${id}`" :src="source" type="audio/mpeg" />
         </audio>
         <img :class="`album ${playing ? 'goleft' : ''}`" src="../assets/images/music/lunaclara.jpeg" alt=""/>
         <img :class="`needle ${playing ? 'visible' : ''}`" src="../assets/images/music/needle.png" alt=""/>
@@ -14,9 +14,9 @@
         </div>
         <img :class="`cd ${playing ? 'spin' : ''}`" src="../assets/images/music/vinyl.png" alt=""/>
       </div>
-      <div v-if="controls">
+      <div :class="`${controls ? 'showcontrols' : 'controlhidden'}`">
         <p class="subtitle">{{mtitle}}</p>
-        <p class="subtitle">{{album.soprano}} y {{album.piano}}</p>
+        <p class="subtitle">{{album.soprano}} y {{album.pianista}}</p>
         <div class="audiocontent">
           <input class="slider" :id="`slider${id}`" type="range" min="0" :max="music.duration" v-model="current"/>
           <p style="color: white; width: 20%">{{ time }}</p>
@@ -79,9 +79,9 @@ export default {
     };
   },
   mounted() {
-    this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
+    this.source = this.album.songs[this.currentTrack].src
     this.mtitle = this.album.songs[this.currentTrack].title
-    this.music = document.getElementById("song" + this.id);
+    this.music = document.getElementById(this.id);
   },
   methods: {
     playMusic() {
@@ -113,7 +113,7 @@ export default {
       if(this.music.play){
         this.music.load()
       }
-      this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
+      this.source = this.album.songs[this.currentTrack].src
       this.mtitle = this.album.songs[this.currentTrack].title
       this.playMusic()
     },
@@ -123,7 +123,7 @@ export default {
           this.music.load()
         }
         this.currentTrack --
-        this.source = "../assets/audio/"+ this.album.songs[this.currentTrack].src
+        this.source = this.album.songs[this.currentTrack].src
         this.mtitle = this.album.songs[this.currentTrack].title
         this.playMusic()
       }

@@ -1,44 +1,45 @@
 <template>
-  <div class="biography">
-    <div class="container">
-      <div :class="{ photofull: full, photo: !full }">
-        <img
-          v-if="full"
-          loading="lazy"
-          class="picture"
-          src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg"
-          alt=""
-        />
-        <img
-          v-else
-          loading="lazy"
-          class="picture"
-          src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg"
-          alt=""
-        />
-      </div>
-      <div class="content" :class="{ margincontent: !full }">
-        <div v-if="full" class="text">
-          <h1 class="title">{{ $t("biography.title") }}</h1>
-          <p>{{ $t("biography.full.paragraph1") }}</p>
-          <p>{{ $t("biography.full.paragraph2") }}</p>
-          <p>{{ $t("biography.full.paragraph3") }}</p>
-          <p>{{ $t("biography.full.paragraph4") }}</p>
-          <p>{{ $t("biography.full.paragraph5") }}</p>
-          <p>{{ $t("biography.full.paragraph6") }}</p>
-          <p>{{ $t("biography.full.paragraph7") }}</p>
-          <p>{{ $t("biography.full.paragraph8") }}</p>
-          <p>{{ $t("biography.full.paragraph9") }}</p>
-          <p>{{ $t("biography.full.paragraph10") }}</p>
-          <p>{{ $t("biography.full.paragraph11") }}</p>
-          <p>{{ $t("biography.full.paragraph12") }}</p>
-          <p>{{ $t("biography.full.paragraph13") }}</p>
-          <div class="sign">
-            <img
-              src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png"
-              alt=""
-            />
-          </div>
+    <div :class="{biograpy: true, 'full': full}">
+        <div class="container">
+            <div :class="{photofull: full, photo: !full, 'full': !full}">
+                <img v-if="full" loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
+                <img v-else loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
+            </div>
+            <div class="content" :class="{margincontent: !full}">
+                <div v-if="full" class="textfull">
+                    <h1 class="title">{{ $t('biography.title') }}</h1>
+                    <p>{{ $t('biography.full.paragraph1') }}</p>
+                    <p>{{ $t('biography.full.paragraph2') }}</p>
+                    <p>{{ $t('biography.full.paragraph3') }}</p>
+                    <p>{{ $t('biography.full.paragraph4') }}</p>
+                    <p>{{ $t('biography.full.paragraph5') }}</p>
+                    <p>{{ $t('biography.full.paragraph6') }}</p>
+                    <p>{{ $t('biography.full.paragraph7') }}</p>
+                    <p>{{ $t('biography.full.paragraph8') }}</p>
+                    <p>{{ $t('biography.full.paragraph9') }}</p>
+                    <p>{{ $t('biography.full.paragraph10') }}</p>
+                    <p>{{ $t('biography.full.paragraph11') }}</p>
+                    <p>{{ $t('biography.full.paragraph12') }}</p>
+                    <p>{{ $t('biography.full.paragraph13') }}</p>
+                    <div class="sign">
+                        <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
+                    </div>
+                </div>
+                <div v-else class="text">
+                    <h1 class="title">{{ $t('biography.title') }}</h1>
+                    <p><i class="quote">{{ $t('biography.resume.paragraph1') }}</i></p>
+                    <p>{{ $t('biography.resume.paragraph2') }}</p>
+                    <p>{{ $t('biography.resume.paragraph3') }}</p>
+                    <p>{{ $t('biography.resume.paragraph4') }}</p>
+                    <p>{{ $t('biography.resume.paragraph5') }}</p>
+                    <div class="sign">
+                        <router-link class="link" to="/biography">
+                            {{ $t('biography.knowMore') }}
+                        </router-link>
+                            <img loading="lazy" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div v-else class="text">
           <h1 class="title">{{ $t("biography.title") }}</h1>
@@ -70,96 +71,119 @@ export default {
 };
 </script>
 <style scoped>
-.biography {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 0;
+.biograpy{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
 }
-.link {
-  text-decoration: underline;
+.biograpy.full{
+    padding: 0;
 }
-.container {
-  max-width: var(--app-max-width);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
+.biograpy.full .container{
+    position: relative;
 }
-.content {
-  width: 100%;
-  display: flex;
-  max-width: 460px;
-  justify-content: center;
-  margin-left: 2rem;
+.biograpy.full .container .content{
+    max-width: 100%;
+    justify-content: flex-end;
 }
-.margincontent {
-  margin: 5rem;
+
+.link{
+    text-decoration: underline;
 }
-.content .title {
-  font-family: "Changa", sans-serif;
-  font-weight: normal;
-  font-size: 48px;
+.container{
+    max-width: var(--app-max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
 }
-.quote {
-  font-size: 20px;
-  font-weight: bold;
+.content{
+    width: 100%;
+    display: flex;
+    max-width: 460px;
+    justify-content: center;
+    margin-left: 2rem;
 }
-.text {
-  font-family: Lato, sans-serif;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: justify;
-  max-width: 610px;
+.margincontent{
+    margin: 5rem
 }
-.text p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
+.content .title{
+    font-family: "Changa", sans-serif;
+    font-weight: normal;
+    font-size: 48px;
 }
-.photofull {
-  width: 486px;
-  height: 765px;
-  border: 1px solid #ffff;
-  padding: 2rem;
-  position: relative;
+.quote{
+    font-size: 20px;
+    font-weight: bold;
 }
-.photo {
-  width: 526px;
-  height: 365px;
-  border: 1px solid #ffff;
-  padding: 2rem;
-  position: relative;
+.text{
+    font-family: Lato, sans-serif;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: justify;
+    max-width: 610px;
 }
-.sign {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem 0;
+.textfull{
+    font-family: Lato, sans-serif;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: justify;
+    max-width: 540px;
 }
-.sign img {
-  height: 40px;
+.text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
 }
-.picture {
-  width: 560px;
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
+.photofull{
+    width: 486px;
+    height: 765px;;
+    border: 1px solid #ffff;
+    padding: 2rem;
+    position: fixed;
+    top: 5rem;
 }
-.photofull img {
-  width: 560px;
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
+.photo{
+    width: 526px;
+    height: 365px;;
+    border: 1px solid #ffff;
+    padding: 2rem;
+    position: relative;
+}
+.sign{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+.sign img{
+    height: 40px;
+}
+.picture{
+    width: 560px;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+}
+.photofull img{
+    width: 560px;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
 }
 @media (max-width: 1240px) {
-  .container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .content {
-    max-width: var(--app-max-width);
-  }
+   .biograpy.full.container, .container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .photofull{
+        position: relative;
+    }
+    .biograpy.full .container .content{
+                max-width: 500px;
+
+    }
 }
 @media (max-width: 650px) {
   .photo {
@@ -187,5 +211,23 @@ export default {
   p{
     text-align: left;
   }
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dd4377; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>
