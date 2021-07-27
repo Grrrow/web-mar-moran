@@ -1,9 +1,9 @@
 <template>
     <div :class="{biograpy: true, 'full': full}">
         <div class="container">
-            <div :class="{photofull: full, 'full': !full}">
-                <img v-if="full" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
-                <img v-else class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
+            <div :class="{photofull: full, photo: !full, 'full': !full}">
+                <img v-if="full" loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
+                <img v-else loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="textfull">
@@ -36,7 +36,7 @@
                         <router-link class="link" to="/biography">
                             {{ $t('biography.knowMore') }}
                         </router-link>
-                            <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
+                            <img loading="lazy" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
                     </div>
                 </div>
             </div>
@@ -172,6 +172,16 @@ export default {
         width: 350px;
         top: 10px;
         left: 1rem;
+    }
+        .photofull {
+        width: 200px;
+        height: 300px;
+    }
+    .photofull img {
+        width: 250px;
+        top: 1rem;
+        left: 1rem;
+        position:absolute;
     }
     .content{
         margin-left: 0;

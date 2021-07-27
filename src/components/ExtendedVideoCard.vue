@@ -40,4 +40,9 @@ button{
   border-radius: 5px;
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  iframe {
+    height: 200px;
+  }
+}
 </style>

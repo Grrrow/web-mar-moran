@@ -8,11 +8,12 @@
                 <router-link class="link" to="videos">{{ $t('header.video') }}</router-link>
                 <router-link class="link" to="music">{{ $t('header.music') }}</router-link>
                 <router-link class="link" to="biography">{{ $t('header.biography') }}</router-link>
+                <router-link class="link" to="events">{{ $t('header.events') }}</router-link>
                 <router-link class="link" to="contact">{{ $t('header.contact') }}</router-link>
                 <router-link class="link" to="news">{{ $t('header.news') }}</router-link>
-                <select v-model="$i18n.locale">
-                    <option value="en">en</option>
-                    <option value="es">es</option>
+                <select class="languaje-modal" v-model="$i18n.locale">
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
                 </select>
             </div>
             <select class="languaje-mobile" v-model="$i18n.locale">
@@ -25,6 +26,7 @@
                 <router-link to="music">{{ $t('header.music') }}</router-link>
                 <router-link to="video">{{ $t('header.video') }}</router-link>
                 <router-link to="biography">{{ $t('header.biography') }}</router-link>
+                <router-link to="events">{{ $t('header.events') }}</router-link>
                 <router-link to="contact">{{ $t('header.contact') }}</router-link>
                 <router-link to="news">{{ $t('header.news') }}</router-link>
             </Slide>
@@ -103,6 +105,22 @@ header{
 .link::before{
   bottom: -1px;
   left: 0px;
+}
+.languaje-modal{
+  background: transparent;
+  outline: none;
+  border: 1px solid  rgb(60, 60, 60);
+  color: var(--white-00);
+  width: 75px;
+  padding: 12px;
+}
+.languaje-modal option{
+  background: var(--gray-00);
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  height: 15px;
 }
 .link:hover::before,  .link:focus::before{
   width: 70%;
