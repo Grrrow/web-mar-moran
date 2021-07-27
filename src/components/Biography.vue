@@ -1,12 +1,12 @@
 <template>
-    <div class="biography">
+    <div :class="{biograpy: true, 'full': full}">
         <div class="container">
-            <div :class="{photofull: full, photo: !full}">
+            <div :class="{photofull: full, photo: !full, 'full': !full}">
                 <img v-if="full" loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
                 <img v-else loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
             </div>
             <div class="content" :class="{margincontent: !full}">
-                <div v-if="full" class="text">
+                <div v-if="full" class="textfull">
                     <h1 class="title">{{ $t('biography.title') }}</h1>
                     <p>{{ $t('biography.full.paragraph1') }}</p>
                     <p>{{ $t('biography.full.paragraph2') }}</p>
@@ -49,11 +49,22 @@ export default {
 }
 </script>
 <style scoped>
-.biography{
+.biograpy{
     display: flex;
     justify-content: center;
     padding: 4rem 0;
 }
+.biograpy.full{
+    padding: 0;
+}
+.biograpy.full .container{
+    position: relative;
+}
+.biograpy.full .container .content{
+    max-width: 100%;
+    justify-content: flex-end;
+}
+
 .link{
     text-decoration: underline;
 }
@@ -90,6 +101,12 @@ export default {
     text-align: justify;
     max-width: 610px;
 }
+.textfull{
+    font-family: Lato, sans-serif;
+    color:rgba(255, 255, 255, 0.8);
+    text-align: justify;
+    max-width: 540px;
+}
 .text p{
     font-size: 16px;
     font-weight: 400;
@@ -100,7 +117,8 @@ export default {
     height: 765px;;
     border: 1px solid #ffff;
     padding: 2rem;
-    position: relative;
+    position: fixed;
+    top: 5rem;
 }
 .photo{
     width: 526px;
@@ -132,12 +150,17 @@ export default {
     top: 2rem;
 }
 @media (max-width: 1240px) {
-    .container {
+   .biograpy.full.container, .container {
         justify-content: center;
         flex-wrap: wrap;
     }
-    .content{
-        max-width: var(--app-max-width);
+
+    .photofull{
+        position: relative;
+    }
+    .biograpy.full .container .content{
+                max-width: 500px;
+
     }
 }
 @media (max-width: 650px) {
@@ -163,5 +186,23 @@ export default {
     .content{
         margin-left: 0;
     }
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dd4377; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>
