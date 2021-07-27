@@ -41,12 +41,34 @@
                 </div>
             </div>
         </div>
+        <div v-else class="text">
+          <h1 class="title">{{ $t("biography.title") }}</h1>
+          <p>
+            <i class="quote">{{ $t("biography.resume.paragraph1") }}</i>
+          </p>
+          <p>{{ $t("biography.resume.paragraph2") }}</p>
+          <p>{{ $t("biography.resume.paragraph3") }}</p>
+          <p>{{ $t("biography.resume.paragraph4") }}</p>
+          <p>{{ $t("biography.resume.paragraph5") }}</p>
+          <div class="sign">
+            <router-link class="link" to="/biography">
+              {{ $t("biography.knowMore") }}
+            </router-link>
+            <img
+              loading="lazy"
+              src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
-    props:['full']
-}
+  props: ["full"],
+};
 </script>
 <style scoped>
 .biograpy{
@@ -164,28 +186,31 @@ export default {
     }
 }
 @media (max-width: 650px) {
-    .photo{
-        width:300px;
-        height: 200px;
-    }
-    .photo img{
-        width: 350px;
-        top: 10px;
-        left: 1rem;
-    }
-        .photofull {
-        width: 200px;
-        height: 300px;
-    }
-    .photofull img {
-        width: 250px;
-        top: 1rem;
-        left: 1rem;
-        position:absolute;
-    }
-    .content{
-        margin-left: 0;
-    }
+  .photo {
+    width: 250px;
+    height: 200px;
+  }
+  .photo img {
+    width: 300px;
+    top: 10px;
+    left: 1rem;
+  }
+  .photofull {
+    width: 200px;
+    height: 300px;
+  }
+  .photofull img {
+    width: 250px;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+  }
+  .content {
+    margin-left: 0 auto;
+  }
+  p{
+    text-align: left;
+  }
 }
 ::-webkit-scrollbar {
   width: 2px;

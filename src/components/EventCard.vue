@@ -1,5 +1,8 @@
 <template>
-  <div class="event-card" :style="{ backgroundImage: 'url(' + event.poster + ')' }">
+  <div
+    class="event-card"
+    :style="{ backgroundImage: 'url(' + event.poster + ')' }"
+  >
     <div class="info">
       <h3 class="info__title">{{event.title}}</h3>
       <h4 class="info__role">- {{event.role}} -</h4>
@@ -20,7 +23,16 @@
 </template>
 <script>
 export default {
-  props: ['event']
+  props: ["event"],
+  data() {
+    return {
+      dateOptions: {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      },
+    };
+  },
 };
 </script>
 <style scoped>
