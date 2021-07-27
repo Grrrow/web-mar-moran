@@ -1,26 +1,27 @@
 <template>
-  <div class="event-card">
+  <div class="event-card" :style="{ backgroundImage: 'url(' + event.poster + ')' }">
     <div class="info">
-      <h3 class="info__title">Tragedie Of Carmen</h3>
-      <h4 class="info__role">- Frasquita -</h4>
-      <p class="info__date">Oviedo | 12 de enero</p>
+      <h3 class="info__title">{{event.title}}</h3>
+      <h4 class="info__role">- {{event.role}} -</h4>
+      <p class="info__date">{{ event.location }} | {{event.date}}</p>
       <div class="extra-info">
-        <p class="resume"></p>
-        <div class="actions">
+        <p class="resume">{{event.resume}}</p>
+        <a :href="event.link" class="actions">
           Comprar ahora
-        </div>
+        </a>
       </div>
     </div>
   </div>
 </template>
-<script setup>
-
+<script>
+export default {
+  props: ['event']
+};
 </script>
 <style scoped>
     .event-card{
         height: 520px;
         width: 340px;
-        background-image: url("https://www.cuadrosguapos.com/images/product_images/popup_images/330_0_cartel_de_opera_madama_butterfly.jpg");
         background-size: cover;
         position: relative;
         border: 1px solid transparent;

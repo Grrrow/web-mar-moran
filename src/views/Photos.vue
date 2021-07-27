@@ -5,7 +5,7 @@
       <h1>Fotos</h1>
       <div class="main_pictures">
         <div
-          v-for="(picture, index) in pictures"
+          v-for="(picture, index) in picturesList"
           :key="index"
           @click="show(index)"
           class="pictures"
@@ -30,7 +30,8 @@
 import { useMeta } from 'vue-meta'
 
 import PhotosCard from "../components/PhotosCard.vue";
-import getPictures from '../content/getPictures.js'
+import { picturesCollection } from '../content/firebase'
+
 export default {
   components: { PhotosCard },
   setup(){
@@ -47,12 +48,14 @@ export default {
       imgs: [],
       visible: false,
       index: 0,
-      pictures: [],
+      picturesList: [],
     };
   },
   async created() {
-    this.pictures = await getPictures()
-    this.pictures.map((picture) => {
+    const pictures =  await picturesCollection.get()
+    this.picturesList = pictures.data().picturesList
+    console.log(this.picturesList)
+    this.picturesList.map((picture) => {
       this.imgs.push(picture.imageUrl);
     });
   },

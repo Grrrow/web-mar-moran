@@ -4,7 +4,7 @@
     <div class="container">
       <h1>{{ $t("videos.title") }}</h1>
       <div class="main_videos">
-        <div v-for="(video, index) in videos" :key="index" class="videos">
+        <div v-for="(video, index) in videosList" :key="index" class="videos">
           <VideosCard :video="video" v-on:close="expand(video)" />
         </div>
       </div>
@@ -21,7 +21,8 @@
 import { useMeta } from 'vue-meta'
 import VideosCard from "../components/VideosCard.vue";
 import ExtendedVideoCard from "../components/ExtendedVideoCard.vue";
-import getVideos from '../content/getVideos.js'
+import { videosCollection } from '../content/firebase'
+
 export default {
   setup(){
     useMeta({
@@ -30,15 +31,16 @@ export default {
     })
   },
   components: { VideosCard, ExtendedVideoCard },
+  async created() {
+    const videos =  await videosCollection.get()
+    this.videosList = videos.data().videosList
+  },
   data() {
     return {
       showExpanded: false,
-      videos: [],
+      videosList: [],
       videoExpanded: [],
     };
-  },
-  async created(){
-    this.videos = await getVideos()
   },
   methods: {
     expand(video) {
