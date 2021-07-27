@@ -80,6 +80,13 @@ p {
   .eventInfo {
     display: flex;
     flex-direction: column;
+    padding: 0;
+  }
+  .eventDescription {
+    padding: 0 ;
+  }
+  .dateContent{
+    max-width: 100%;
   }
 }
 
