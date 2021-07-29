@@ -15,7 +15,7 @@
         <div>
           <div :class="`text ${slider.position}`">
             <h1>{{ slider.title }}</h1>
-            <p class="description">{{ slider.Description }}</p>
+            <p class="description">{{ slider.description }}</p>
           </div>
         </div>
       </template>

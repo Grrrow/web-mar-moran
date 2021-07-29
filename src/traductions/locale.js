@@ -98,13 +98,13 @@ export const messages = {
         paragraph1:
           '"La música y el ritmo encuentran su camino en los lugares secretos del alma" (Platon)',
         paragraph2:
-          'Mar Morán estudió flauta pico en el Conservatorio de Badajoz y canto en la Escuela Superior de canto de Madrid.',
+          'Mar Morán comenzó en la música con sus estudios de flauta pico en el Conservatorio "Juan Vázquez" de Badajoz. Continuó sus estudios en la modalidad de canto en la Escuela Superior de canto de Madrid, completando sus estudios en la International Opera Academy de Gante (Bélgica) .',
         paragraph3:
-          "Entre otros, estudió con Elena Muñoz Valdelomar, Victoria Manso, David Mason, Alicia Amo, Alex Ashworth, Sandra Medeiros, Armando Possante, Sylvia Schwartz, Stéphanie d'Oustrac, Anna Maria Ferrante, Boris Ignatov, Helen Tintes-Schuermann, Giulio Zappa, Charlotte Margiono, Dietrich Henschel y Plácido Domingo.",
+          "Su formación vocal se consolida con la maestra de canto Elena Muñoz Valdelomar, perfecionando su técnica con artistas como David Mason, Alicia Amo, Alex Ashworth, Sandra Medeiros, Armando Possante, Sylvia Schwartz, Stéphanie d'Oustrac, Anna Maria Ferrante, Nicola Beller Carbone, Martin Wölfel, Helen Tintes-Schuermann, Giulio Zappa, Ricardo Estrada, Charlotte Margiono, Dietrich Henschel y Plácido Domingo.",
         paragraph4:
-          'Mar ha recibido diferentes premios como el Premio Extraordinario y la Beca de Juventudes Musicales de la Comunidad de Madrid. Además, trabajó como soprano titular en el Coro del Teatro Real de Madrid durante varias temporadas.',
+          'Mar ha sido premiada con el Premio Extraordinario y la Beca de Juventudes Musicales de la Comunidad de Madrid en el año 2015, Premio fin de carrera "Lola Rodriguez de Aragón" 2020, Primer Premi Absolut en el IV Concurs Internacional de Cant "Martín y Soler" 2021 en Polinyà del Xúquer (Valencia), 3º Premio en el XXXVIII Concurso Internacional de Canto "Ciudad de Logroño" 2021 en La Rioja en la categoría de voces femeninas y 1º premio en el 9º Certamen Internacional de Habaneras para Solistas Líricos 2021 en Torrevieja.',
         paragraph5:
-          'En la actualidad está realizando un curso de postgrado en la Academia Internacional de Ópera de Gante (Bélgica).',
+          'Recientemente ha lanzado su primer disco “Luna clara” junto al pianista Aurelio Viribay respaldado por el sello discográfico norteamericano Odradek Records, que recogen la integral de canciones del compositor español Jesús García Leoz. Próximamente debutará el rol "Reina de la Noche" de la Ópera "La Flauta Mágica" de Mozart en la temporada 21/22 del Teatro Campoamor de Oviedo.',
       },
       full: {
         paragraph1:
