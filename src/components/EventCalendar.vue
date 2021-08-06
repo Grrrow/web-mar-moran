@@ -1,9 +1,9 @@
 <template>
   <div class="selected-day">
-    <h2 v-if="!noDate">
+    <h2 class="dateTitle" v-if="!noDate">
       {{ dateLocalString }}
     </h2>
-    <h2 v-else>
+    <h2 class="dateTitle" v-else>
       {{ noDate }}
     </h2>
     <div v-if="!empty" class="eventInfo">
@@ -13,16 +13,16 @@
       <div class="eventDescription">
         <div class="ornamentText">
           <img src="../assets/images/ornament.png" alt="" />
-          <h3>{{ eventMap.location }}</h3>
+          <h3 class="locationTitle">{{ eventMap.location }}</h3>
           <img src="../assets/images/ornamentvolt.png" alt="" />
         </div>
         <div class="dateContent">
-          <p>
+          <p class="paragraph">
             {{ eventMap.resume }}
           </p>
           <div class="eventHour">
             <i class="far fa-clock" />
-            <p>{{ dateTimeString }}</p>
+            <p class="paragraph">{{ dateTimeString }}</p>
           </div>
         </div>
       </div>
