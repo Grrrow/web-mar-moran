@@ -24,18 +24,18 @@
   width: 100%;
 }
 
-h2 {
+.dateTitle {
   padding: 10px;
   text-align: center;
   color: white;
   font-style: italic;
   border-bottom: #dd4377 4px solid;
 }
-h3 {
+.locationTitle {
   font-style: italic;
   color: white;
 }
-p {
+.paragraph {
   text-align: justify;
 }
 .eventInfo {

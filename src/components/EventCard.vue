@@ -3,6 +3,9 @@
     class="event-card"
     :style="{ backgroundImage: 'url(' + event.poster + ')' }"
   >
+    <div @click="shareEvent()" style="position: absolute; top: 1%; right: 1%; width: 50px; border: white 2px solid; color: white">
+      <i class="fas fa-share-alt fa-2x"></i>
+    </div>
     <div class="info">
       <h3 class="info__title">{{event.title}}</h3>
       <h4 class="info__role">- {{event.role}} -</h4>
@@ -22,6 +25,7 @@
   </div>
 </template>
 <script>
+
 export default {
   props: ["event"],
   data() {
@@ -32,6 +36,21 @@ export default {
         day: "numeric",
       },
     };
+  },
+  methods: {
+    shareEvent(){
+      if(navigator.share) {
+        const shareData = {
+          title: this.event.title,
+          text: 'Mi gente, se viene actuación, nos echamos un cafelito y nos vamos pa Oviedo',
+          url: this.event.link
+        } 
+        navigator.share(shareData)
+      }
+      else{
+        console.log("navigator non compatible");
+      }
+    }
   },
 };
 </script>
