@@ -66,7 +66,7 @@ export default {
 .description {
   max-width: 500px;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .text {
     position: absolute;
     top: 15%;
