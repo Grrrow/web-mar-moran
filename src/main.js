@@ -12,6 +12,8 @@ import VCalendar from 'v-calendar'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 
+import masonry from 'vue-next-masonry'
+
 const i18n = createI18n({
   locale: 'es', // set locale
   messages,
@@ -22,6 +24,7 @@ const app = createApp(App)
   .use(i18n)
   .use(VueEasyLightBox)
   .use(VCalendar, {})
+  .use(masonry)
 app
   .use(VueReCaptcha, {
     siteKey: import.meta.env.VITE_APP_CAPTCHATOKEN,
