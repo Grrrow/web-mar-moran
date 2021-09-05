@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="padding_20">
+    <div class="imageContainer">
       <img :src="picture.imageUrl" alt="" style="width: 100%" />
       <div class="plus">
         <a href="#">+</a>
@@ -10,14 +10,12 @@
   </div>
 </template>
 <script>
-
 export default {
   props: ['picture'],
 };
 </script>
 <style scoped>
-.padding_20 {
-  padding: 20px;
+.imageContainer {
   position: relative;
   text-align: center;
   color: white;
@@ -40,15 +38,15 @@ export default {
   transform: translate(-50%, -50%);
 }
 
-.padding_20:hover > .centered {
+.imageContainer:hover > .centered {
   opacity: 10;
   transition: all 1s;
 }
-.padding_20:hover > .plus {
+.imageContainer:hover > .plus {
   opacity: 10;
   transition: all 1s;
 }
-.padding_20:hover > img {
+.imageContainer:hover > img {
   filter: brightness(50%);
   transition: all 1s;
 }
