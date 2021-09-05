@@ -1,16 +1,15 @@
 <template>
   <div class="container">
-    <div class="close">
+    <div @click="closeShareModal()" class="close">
       <i class="fas fa-times"></i>
     </div>
     <h2>Compartir</h2>
     <p>Compartir enlace vía:</p>
     <div class="links">
-      <span><i class="fab fa-facebook-f"></i></span>
-      <span><i class="fab fa-twitter"></i></span>
-      <span><i class="instagram fab fa-instagram"></i></span>
-      <span><i class="whatsapp fab fa-whatsapp"></i></span>
-      <span><i class="telegram fab fa-telegram-plane"></i></span>
+      <span @click="shareOnFacebook()"><i class="fab fa-facebook-f"></i></span>
+      <span @click="shareOnTwitter()"><i class="fab fa-twitter"></i></span>
+      <span @click="shareOnWhatsapp()"><i class="whatsapp fab fa-whatsapp"></i></span>
+      <span @click="shareOnTelegram()"><i class="telegram fab fa-telegram-plane"></i></span>
     </div>
     <p>Copiar enlace</p>
     <div class="copyURL">
@@ -43,6 +42,28 @@ export default {
         throw e
       }
     },
+    shareOnFacebook() {
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.url}`,'_blank')
+      this.closeShareModal()
+    },
+    shareOnTwitter() {
+      const textToShare = 'prueba'
+      window.open(`https://twitter.com/intent/tweet/?text=${textToShare}&url=${this.url}`,'_blank')
+      this.closeShareModal()
+    },
+    shareOnTelegram() {
+      const textToShare = 'prueba'
+      window.open(`https://t.me/share/url?url=${this.url}&text=${textToShare}`,'_blank')
+      this.closeShareModal()
+    },
+    shareOnWhatsapp() {
+      const textToShare = 'prueba'
+      window.open(`https://web.whatsapp.com/send?text=${textToShare}`,'_blank')
+      this.closeShareModal()
+    },
+    closeShareModal() {
+      this.$emit('close')
+    }
   },
 }
 </script>
@@ -69,10 +90,6 @@ export default {
   color: white;
 }
 .links span:nth-child(3) {
-  background: #e1306c;
-  color: white;
-}
-.links span:nth-child(4) {
   background: #25d366;
   color: white;
 }
@@ -89,6 +106,9 @@ export default {
   height: 50px;
   justify-content: center;
   width: 50px;
+}
+.links span:hover, button:hover, .close:hover{
+  opacity: 0.7;
 }
 .copyURL {
   display: flex;
