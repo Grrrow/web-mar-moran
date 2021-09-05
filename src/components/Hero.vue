@@ -2,46 +2,50 @@
   <div class="slider">
     <vueper-slides
       class="no-shadow"
-      :autoplay= "sliderList.length > 0" 
+      :autoplay="sliderList.length > 0"
       :visible-slides="1"
       slide-multiple
       :gap="1"
-      :slide-ratio="1/1.5"
+      :slide-ratio="1 / 1.5"
       :dragging-distance="200"
       :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
-    <vueper-slide v-for="(slider, index) in sliderList.slidesHero" lazy-load-on-drag lazy :key="index" :image="slider.url">
-      <template v-slot:content>
-        <div>
-          <div :class="`text ${slider.position}`">
-            <h1>{{ slider.title }}</h1>
-            <p class="description">{{ slider.description }}</p>
+      <vueper-slide
+        v-for="(slider, index) in sliderList.slidesHero"
+        lazy-load-on-drag
+        lazy
+        :key="index"
+        :image="slider.url"
+      >
+        <template v-slot:content>
+          <div>
+            <div :class="`text ${slider.position}`">
+              <h1>{{ slider.title }}</h1>
+              <p class="description">{{ slider.description }}</p>
+            </div>
           </div>
-        </div>
-      </template>
-    </vueper-slide>
-  </vueper-slides>
+        </template>
+      </vueper-slide>
+    </vueper-slides>
   </div>
 </template>
 <script>
-import { VueperSlides, VueperSlide } from "vueperslides";
-import "vueperslides/dist/vueperslides.css";
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 import { sliderCollection } from '../content/firebase'
 export default {
-  components: {VueperSlides, VueperSlide},
+  components: { VueperSlides, VueperSlide },
   data() {
-    return{
-      sliderList: []
+    return {
+      sliderList: [],
     }
   },
   async created() {
-    const slider =  await sliderCollection.get()
+    const slider = await sliderCollection.get()
     this.sliderList = slider.data()
     console.log(this.sliderList.slidesHero)
-  }
-
+  },
 }
-
 </script>
 <style scoped>
 .slider {
@@ -55,15 +59,31 @@ export default {
   top: 40%;
   color: var(--white-00);
 }
-.text.left {
-  left: 6rem;
-  text-align: left;
-}
 .text.right {
   right: 6rem;
   text-align: right;
 }
-.description{
+.description {
   max-width: 500px;
+}
+@media (max-width: 500px) {
+  .text {
+    position: absolute;
+    top: 15%;
+    font-size: 10px;
+    color: var(--white-00);
+  }
+  .text.left {
+    left: 4rem;
+    text-align: left;
+  }
+  .text.right {
+    right: 4rem;
+    text-align: right;
+  }
+
+  .description {
+    max-width: 200px;
+  }
 }
 </style>
