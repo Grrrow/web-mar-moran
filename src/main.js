@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/styles/GlobalStyles.css'
+import './assets/styles/Transitions.css'
 import router from './router'
 import { createI18n } from 'vue-i18n'
 import { VueReCaptcha } from 'vue-recaptcha-v3'
