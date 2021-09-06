@@ -5,20 +5,39 @@
         <audio :id="`${id}`">
           <source :id="`${id}`" :src="source" type="audio/mpeg" />
         </audio>
-        <img :class="`album ${playing ? 'goleft' : ''}`" src="../assets/images/music/lunaclara.jpeg" alt=""/>
-        <img :class="`needle ${playing ? 'visible' : ''}`" src="../assets/images/music/needle.png" alt=""/>
+        <img
+          :class="`album ${playing ? 'goleft' : ''}`"
+          src="../assets/images/music/lunaclara.jpeg"
+          alt=""
+        />
+        <img
+          :class="`needle ${playing ? 'visible' : ''}`"
+          src="../assets/images/music/needle.png"
+          alt=""
+        />
         <div v-if="!controls">
           <div class="control" @click="playMusic" v-if="!playing">
-             <i class="fa fa-play"></i>
+            <i class="fa fa-play"></i>
           </div>
         </div>
-        <img :class="`cd ${playing ? 'spin' : ''}`" src="../assets/images/music/vinyl.png" alt=""/>
+        <img
+          :class="`cd ${playing ? 'spin' : ''}`"
+          src="../assets/images/music/vinyl.png"
+          alt=""
+        />
       </div>
       <div :class="`${controls ? 'showcontrols' : 'controlhidden'}`">
-        <p class="subtitle">{{mtitle}}</p>
-        <p class="subtitle">{{album.soprano}} y {{album.pianista}}</p>
+        <p class="subtitle">{{ mtitle }}</p>
+        <p class="subtitle">{{ album.soprano }} y {{ album.pianista }}</p>
         <div class="audiocontent">
-          <input class="slider" :id="`slider${id}`" type="range" min="0" :max="music.duration" v-model="current"/>
+          <input
+            class="slider"
+            :id="`slider${id}`"
+            type="range"
+            min="0"
+            :max="music.duration"
+            v-model="current"
+          />
           <p style="color: white; width: 20%">{{ time }}</p>
         </div>
         <div class="audio_controls">
@@ -30,7 +49,7 @@
               <i class="fa fa-play"></i>
             </div>
             <div v-else>
-              <i class="fa fa-pause"></i>     
+              <i class="fa fa-pause"></i>
             </div>
           </div>
           <div @click="nextTrack()">
@@ -39,23 +58,23 @@
         </div>
       </div>
       <p class="title">
-        {{album.title}}
+        {{ album.title }}
       </p>
-      <p style="color: white">Disponible en:</p>
+      <p style="color: white; text-align: center">Disponible en:</p>
       <div class="rrss">
         <div>
-          <a :href="album.spotify" target=”_blank” class="spotifylink">
+          <a :href="album.spotify" target="”_blank”" class="spotifylink">
             <i class="fab fa-2x fa-spotify"></i>
           </a>
         </div>
         <div>
-          <a :href="album.appleMusic" target=”_blank”>
+          <a :href="album.appleMusic" target="”_blank”">
             <i class="fab fa-2x fa-apple"></i>
           </a>
         </div>
         <div>
-          <a :href="album.amazonMusic" target=”_blank” class="amazonlink">
-           <i class="fab fa-2x fa-amazon"></i>
+          <a :href="album.amazonMusic" target="”_blank”" class="amazonlink">
+            <i class="fab fa-2x fa-amazon"></i>
           </a>
         </div>
       </div>
@@ -64,7 +83,7 @@
 </template>
 <script>
 export default {
-  props: ["album", "id"],
+  props: ['album', 'id'],
   data() {
     return {
       playing: false,
@@ -76,60 +95,59 @@ export default {
       currentTrack: 0,
       time: '00:00',
       slider: '',
-    };
+    }
   },
   mounted() {
     this.source = this.album.songs[this.currentTrack].src
     this.mtitle = this.album.songs[this.currentTrack].title
-    this.music = document.getElementById(this.id);
+    this.music = document.getElementById(this.id)
   },
   methods: {
     playMusic() {
-      let slider = document.getElementById("slider" + this.id)
+      let slider = document.getElementById('slider' + this.id)
       this.controls = true
       if (this.music.paused) {
-        this.music.play();
-        this.playing = true;
+        this.music.play()
+        this.playing = true
       } else {
-        this.music.pause();
-        this.playing = false;
+        this.music.pause()
+        this.playing = false
       }
-      this.music.ontimeupdate = () => this.getCurrent();
-      slider.oninput = () => (this.music.currentTime = this.current);
+      this.music.ontimeupdate = () => this.getCurrent()
+      slider.oninput = () => (this.music.currentTime = this.current)
     },
     getCurrent() {
-      this.current = Math.trunc(this.music.currentTime);
-      let minutes = "0" + Math.floor(this.current / 60);
-      let seconds = "0" + (this.current - minutes * 60);
-      this.time = minutes.substr(-2) + ":" + seconds.substr(-2);
+      this.current = Math.trunc(this.music.currentTime)
+      let minutes = '0' + Math.floor(this.current / 60)
+      let seconds = '0' + (this.current - minutes * 60)
+      this.time = minutes.substr(-2) + ':' + seconds.substr(-2)
     },
-    nextTrack(){
-      if(this.currentTrack < this.album.songs.length -1){
-        this.currentTrack ++
-      }
-      else{
+    nextTrack() {
+      if (this.currentTrack < this.album.songs.length - 1) {
+        this.currentTrack++
+      } else {
         this.currentTrack = 0
       }
-      if(this.music.play){
+      if (this.music.play) {
         this.music.load()
       }
       this.source = this.album.songs[this.currentTrack].src
       this.mtitle = this.album.songs[this.currentTrack].title
       this.playMusic()
     },
-    prevTrack(){
-      if(this.currentTrack > 0){
-        if(this.music.play){
+    prevTrack() {
+      if (this.currentTrack > 0) {
+        if (this.music.play) {
           this.music.load()
         }
-        this.currentTrack --
+        this.currentTrack--
         this.source = this.album.songs[this.currentTrack].src
         this.mtitle = this.album.songs[this.currentTrack].title
         this.playMusic()
       }
     },
   },
-};
+}
 </script>
 <style scoped>
 .maindiv {
@@ -159,23 +177,22 @@ export default {
   left: 0;
   z-index: 0;
 }
-.audiocontent{
-  display:flex;
-  align-items:center;
-  justify-content:space-around;
+.audiocontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .control {
   width: 10% !important;
-  border-radius: 50%;
+  border-radius: 999999999999px;
   padding: 5px;
   background-color: white;
   color: rgb(221, 67, 119);
   position: absolute;
-  top: 24%;
-  left: 43%;
+  top: 25%;
+  left: 45%;
   z-index: 3;
   cursor: pointer;
-  opacity: 0.5;
 }
 .title {
   font-size: 22px;
@@ -185,8 +202,8 @@ export default {
   line-height: 20px;
   font-weight: 400;
 }
-.subtitle{
-  color:white;
+.subtitle {
+  color: white;
 }
 .divrelative * {
   width: 100%;
@@ -207,14 +224,14 @@ export default {
   animation-timing-function: linear;
 }
 
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
   width: 100%;
   height: 2px;
   background: rgb(221, 67, 119);
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 10px;
   height: 10px;
@@ -225,25 +242,25 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-.controlhidden{
+.controlhidden {
   display: none;
 }
-.showcontrols{
-  display: block ;
+.showcontrols {
+  display: block;
 }
-.audio_controls{
-  display:flex; 
-  justify-content: center
+.audio_controls {
+  display: flex;
+  justify-content: center;
 }
-.audio_controls div{
-  cursor:pointer;
+.audio_controls div {
+  cursor: pointer;
 }
 .rrss {
   display: flex !important;
   justify-content: space-around;
 }
-.audio_controls div{
-  color:white;
+.audio_controls div {
+  color: white;
 }
 .rrss div {
   width: 20%;
@@ -252,12 +269,12 @@ input[type="range"]::-webkit-slider-thumb {
   border: white 1px solid;
   color: white;
 }
-.spotifylink:hover{
-  color: #1DB954;
+.spotifylink:hover {
+  color: #1db954;
   transition: 0.5s;
 }
-.amazonlink:hover{
-  color: #FF9900;
+.amazonlink:hover {
+  color: #ff9900;
   transition: 0.5s;
 }
 .maindiv:hover .control {
@@ -270,6 +287,62 @@ input[type="range"]::-webkit-slider-thumb {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 700px) {
+  .control {
+    width: 10% !important;
+    border-radius: 999999999999px;
+    padding: 10px 5px;
+    background-color: white;
+    color: rgb(221, 67, 119);
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    z-index: 3;
+    cursor: pointer;
+  }
+}
+@media (max-width: 375px) {
+  .control {
+    width: 10% !important;
+    border-radius: 999999999999px;
+    padding: 5px 10px;
+    background-color: white;
+    color: rgb(221, 67, 119);
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    z-index: 3;
+    cursor: pointer;
+  }
+}
+@media (width: 540px) {
+  .control {
+    width: 10% !important;
+    border-radius: 999999999999px;
+    padding: 5px;
+    background-color: white;
+    color: rgb(221, 67, 119);
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    z-index: 3;
+    cursor: pointer;
+  }
+}
+@media (width: 280px) {
+  .control {
+    width: 10% !important;
+    border-radius: 999999999999px;
+    padding: 5px 10px;
+    background-color: white;
+    color: rgb(221, 67, 119);
+    position: absolute;
+    top: 15%;
+    left: 39%;
+    z-index: 3;
+    cursor: pointer;
   }
 }
 </style>
