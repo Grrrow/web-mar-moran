@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + event.poster + ')' }"
   >
     <div @click="shareEvent()" class="shareButton">
-      <i class="fas fa-share-alt fa-2x"></i>
+      <ShareIcon color="white" width="30" />
     </div>
     <div class="info">
       <h3 class="info__title">{{ event.title }}</h3>
@@ -34,10 +34,10 @@
 </template>
 <script>
 import SocialMediaContainer from './SocialMediaContainer.vue'
-
+import ShareIcon from './ShareIcon.vue'
 export default {
   props: ['event'],
-  components: { SocialMediaContainer },
+  components: { SocialMediaContainer, ShareIcon },
   data() {
     return {
       showShareModal: false,
@@ -112,7 +112,5 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 50px;
-  color: white;
 }
 </style>
