@@ -31,12 +31,12 @@ useMeta({
   color: #2c3e50;
 }
 .router-anim-enter-active {
-  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in 1.2s ease-in both;
+  animation: fade-in 1.2s ease-in both;
 }
 .router-anim-leave-active {
-  -webkit-animation: fade-out 2s ease-out both;
-  animation: fade-out 2s ease-out both;
+  -webkit-animation: fade-out 1.2s ease-out both;
+  animation: fade-out 1.2s ease-out both;
 }
 @-webkit-keyframes fade-in {
   0% {
