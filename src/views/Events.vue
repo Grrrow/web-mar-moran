@@ -1,21 +1,23 @@
 <template>
-  <div class="container">
-    <h1>{{ $t('events.title') }}</h1>
-    <div class="responsiveCalendar">
-      <v-calendar
-        :masks="masks"
-        transition="slide-v"
-        :rows="$screens({ default: 1, lg: 1 })"
-        :is-expanded="true"
-        :attributes="attributes"
-        @dayclick="dayClicked"
-      />
-    </div>
-    <div v-if="selectedDay">
-      <EventCalendar :event="selectedDay" />
-    </div>
-    <div v-else>
-      <EventCalendar :first="firstEvent" />
+  <div class="main">
+    <div class="container">
+      <h1>{{ $t('events.title') }}</h1>
+      <div class="responsiveCalendar">
+        <v-calendar
+          :masks="masks"
+          transition="slide-v"
+          :rows="$screens({ default: 1, lg: 1 })"
+          :is-expanded="true"
+          :attributes="attributes"
+          @dayclick="dayClicked"
+        />
+      </div>
+      <div v-if="selectedDay">
+        <EventCalendar :event="selectedDay" />
+      </div>
+      <div v-else>
+        <EventCalendar :first="firstEvent" />
+      </div>
     </div>
   </div>
 </template>
