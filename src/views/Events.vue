@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <div class="container">
+      <FinishedEvents /> 
       <h1>{{ $t('events.title') }}</h1>
       <div class="responsiveCalendar">
         <v-calendar
@@ -25,6 +26,7 @@
 <script>
 import { useMeta } from 'vue-meta'
 import EventCalendar from '../components/EventCalendar.vue'
+import FinishedEvents from '../components/FinishedEvents.vue'
 import { eventsCollection } from '../content/firebase'
 import '../assets/styles/Calendar.css'
 
@@ -35,7 +37,7 @@ export default {
       htmlAttrs: { lang: 'es', amp: true },
     })
   },
-  components: { EventCalendar },
+  components: { EventCalendar, FinishedEvents },
   async created() {
     const events = await eventsCollection.get()
     this.eventsList = events.data().eventsList
