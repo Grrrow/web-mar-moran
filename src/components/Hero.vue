@@ -11,7 +11,7 @@
       :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
       <vueper-slide
-        v-for="(slider, index) in sliderList.slidesHero"
+        v-for="(slider, index) in sliderList"
         lazy-load-on-drag
         lazy
         :key="index"
@@ -32,9 +32,9 @@
   </div>
 </template>
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
-import { sliderCollection } from '../content/firebase'
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
+import getHeroContent from '../content/slider-content'
 export default {
   components: { VueperSlides, VueperSlide },
   data() {
@@ -43,9 +43,7 @@ export default {
     }
   },
   async created() {
-    const slider = await sliderCollection.get()
-    this.sliderList = slider.data()
-    console.log(this.sliderList.slidesHero)
+    this.sliderList = await getHeroContent();
     this.$nextTick(() => this.observe())
   },
   methods: {

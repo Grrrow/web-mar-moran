@@ -1,14 +1,17 @@
 const sanetizeSliderObject = (data) => {
-    const {id, Description, title, image, position} = data
-    const url = `http://188.166.144.88${image[0].url}`
-    console.log( { id, Description, title, image, position })
-    return { id, Description, title, url, position }
+    const {title, description, colorText, position} = data
+    const url = data.url[0].url
+    return { title, description, url, colorText, position }
 }
 export default async () => {
-    const response = await fetch('http://188.166.144.88/hero-slides')
+    const response = await fetch('https://api.airtable.com/v0/appBV8nDwYEWwVBxi/slidesHero?view=WebMarStaging', { 
+        method: 'GET', 
+        headers: new Headers({
+          'Authorization': 'Bearer keytxVc6GBBouUvtX', 
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }), 
+      });
     const data = await response.json()
-    console.log(data)
-    const result = data.map(item => sanetizeSliderObject(item))
+    const result = data.records.map(item => sanetizeSliderObject(item.fields))
     return result
-    
 }
