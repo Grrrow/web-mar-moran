@@ -27,7 +27,7 @@
 import { useMeta } from 'vue-meta'
 import EventCalendar from '../components/EventCalendar.vue'
 import FinishedEvents from '../components/FinishedEvents.vue'
-import { eventsCollection } from '../content/firebase'
+import getEvents from '../content/events'
 import '../assets/styles/Calendar.css'
 
 export default {
@@ -39,8 +39,8 @@ export default {
   },
   components: { EventCalendar, FinishedEvents },
   async created() {
-    const events = await eventsCollection.get()
-    this.eventsList = events.data().eventsList
+    const events = await getEvents()
+    this.eventsList = events
     console.log(this.eventsList)
     this.sortEventsByDate()
   },

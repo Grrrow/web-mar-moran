@@ -28,7 +28,7 @@ import { useMeta } from 'vue-meta'
 import VideosCard from '../components/VideosCard.vue'
 import ExtendedVideoCard from '../components/ExtendedVideoCard.vue'
 import Filters from '../components/Filters.vue'
-import { videosCollection } from '../content/firebase'
+import getVideos from '../content/getVideos'
 
 export default {
   setup() {
@@ -39,8 +39,9 @@ export default {
   },
   components: { VideosCard, ExtendedVideoCard, Filters },
   async created() {
-    const videos = await videosCollection.get()
-    this.videosList = videos.data().videosList
+    const videos = await getVideos()
+    this.videosList = videos
+    console.log(videos)
   },
   data() {
     return {
@@ -68,8 +69,12 @@ export default {
   },
   computed: {
     filterVideos() {
-      return this.videosList.filter((video) =>
-        video.filter.includes(this.filterWord)
+      console.log(this.videosList)
+      return this.videosList.filter((video) => {
+          return !this.filterWord === 'todo'?
+          video.filter.includes(this.filterWord) :
+          video
+      }
       )
     },
   },

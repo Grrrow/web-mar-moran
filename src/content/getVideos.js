@@ -1,9 +1,9 @@
 const sanetizeVideo = (data) => {
-    const {id, youtubeLink, title, description} = data
-    return {id, youtubeLink, title, description}
+    const {id, youtubeLink, title, description, filter} = data
+    return {youtubeLink, title, description, filter}
 }
 export default async () => {
-    const response = await fetch('https://api.airtable.com/v0/appBV8nDwYEWwVBxi/hero1?view=Hero', { 
+    const response = await fetch('https://api.airtable.com/v0/appBV8nDwYEWwVBxi/videos?view=WebMarStaging', { 
         method: 'GET', 
         headers: new Headers({
           'Authorization': 'Bearer keytxVc6GBBouUvtX', 
@@ -11,7 +11,7 @@ export default async () => {
         }), 
       });
     const data = await response.json()
-    console.log(data)
-    const result = data.map(item => sanetizeVideo(item))
+    const result = data.records.map(item => sanetizeVideo(item.fields))
+    console.log(result)
     return result
 }

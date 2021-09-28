@@ -19,7 +19,7 @@
 import { useMeta } from 'vue-meta'
 
 import NewsCard from "../components/NewsCard.vue"
-import { newsCollection } from '../content/firebase'
+import getNews from '../content/news'
 
 export default {
   setup(){
@@ -30,8 +30,9 @@ export default {
   },
   components: {NewsCard},
   async created() {
-    const news =  await newsCollection.get()
-    this.news = news.data().newsList
+    const news =  await getNews()
+    this.news = news
+    console.log(news)
   },
   data() {
     return {
