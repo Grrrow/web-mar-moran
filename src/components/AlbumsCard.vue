@@ -98,8 +98,8 @@ export default {
     }
   },
   mounted() {
-    this.source = this.album.songs[this.currentTrack].src
-    this.mtitle = this.album.songs[this.currentTrack].title
+    this.source = this.album.srcSong[this.currentTrack].url
+    this.mtitle = this.album.songTitle[this.currentTrack]
     this.music = document.getElementById(this.id)
   },
   methods: {
@@ -131,8 +131,8 @@ export default {
       if (this.music.play) {
         this.music.load()
       }
-      this.source = this.album.songs[this.currentTrack].src
-      this.mtitle = this.album.songs[this.currentTrack].title
+      this.source = this.album.srcSong[this.currentTrack].url
+      this.mtitle = this.album.songTitle[this.currentTrack]
       this.playMusic()
     },
     prevTrack() {
@@ -141,8 +141,8 @@ export default {
           this.music.load()
         }
         this.currentTrack--
-        this.source = this.album.songs[this.currentTrack].src
-        this.mtitle = this.album.songs[this.currentTrack].title
+        this.source = this.album.srcSong[this.currentTrack].url
+        this.mtitle = this.album.songTitle[this.currentTrack]
         this.playMusic()
       }
     },
