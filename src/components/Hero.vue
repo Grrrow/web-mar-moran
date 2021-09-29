@@ -15,10 +15,10 @@
         lazy-load-on-drag
         lazy
         :key="index"
-        :image="slider.url"
       >
         <template v-slot:content>
           <div>
+            <img style="width: 100%" v-lazy="{src: slider.url , loading: 'https://i1.wp.com/angularscript.com/wp-content/uploads/2018/06/Progressively-Loading-Images-With-Blur-Effect-min.png?ssl=1'}"/>
             <div
               :class="`nonVisible text ${slider.position} ${slider.colorText}`"
             >
