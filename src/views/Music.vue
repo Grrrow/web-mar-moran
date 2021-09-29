@@ -19,7 +19,7 @@
 <script>
 import AlbumsCard from "../components/AlbumsCard.vue";
 import { useMeta } from 'vue-meta'
-import { albumsCollection } from '../content/firebase'
+import getMusic from '../content/getMusic'
 
 export default {
   setup(){
@@ -35,8 +35,7 @@ export default {
     };
   },
   async mounted() {
-    const albums =  await albumsCollection.get()
-    this.albumsList = albums.data().albumsList
+    this.albumsList =  await getMusic()
   },
 };
 </script>
