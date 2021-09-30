@@ -36,6 +36,7 @@ export default {
   },
   async mounted() {
     this.albumsList =  await getMusic()
+    console.log(this.albumsList)
   },
 };
 </script>
