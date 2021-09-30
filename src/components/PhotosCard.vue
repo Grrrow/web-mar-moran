@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="imageContainer">
-      <img :src="picture.imageUrl" alt="" style="width: 100%" />
+      <img v-lazy="picture.imageUrl" alt="" style="width: 100%" />
       <div class="plus">
         <a href="#">+</a>
       </div>
