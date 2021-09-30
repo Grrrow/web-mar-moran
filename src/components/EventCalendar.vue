@@ -8,10 +8,10 @@
     </h2>
     <div v-if="!empty" class="eventInfo">
       <div class="eventImage">
-        <img :src="eventMap.poster" />
+        <img v-lazy="eventMap.poster" />
       </div>
       <div class="eventDescription">
-        <div class="ornamentText">
+        <div class="ornamentText" >
           <img src="../assets/images/ornament.png" alt="" />
           <h3 class="locationTitle">{{ eventMap.location }}</h3>
           <img src="../assets/images/ornamentvolt.png" alt="" />

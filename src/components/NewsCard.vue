@@ -1,11 +1,11 @@
 <template>
   <div class="padding_20">
     <a :href="article.link">
-      <img :src="article.imageUrl" alt="" />
+      <img v-lazy="article.imageUrl" alt="" />
       <p v-text="article.title"></p>
     </a>
     <div class="source" v-if="article.iconUrl">
-      <img :src="article.iconUrl" alt="" />
+      <img v-lazy="article.iconUrl" alt="" />
     </div>
   </div>
 </template>
