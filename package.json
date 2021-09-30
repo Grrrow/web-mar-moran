@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@jambonn/vue-lazyload": "^1.0.8",
     "@popperjs/core": "^2.9.2",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.6.8",
@@ -21,7 +22,6 @@
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.8",
     "vue3-burger-menu": "^1.1.0",
-    "vue3-lazyload": "^0.2.2-beta",
     "vueperslides": "^3.3.2"
   },
   "devDependencies": {

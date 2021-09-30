@@ -3,7 +3,7 @@
     <div @click="emitShareEvent(show)" class="shareButton">
       <ShareIcon color="white" width="20" />
     </div>
-    <img :src="show.poster" />
+    <img v-lazy="show.poster" />
     <p>
       {{ show.date.toDate().toLocaleDateString('es-ES', dateOptions) }}
     </p>
