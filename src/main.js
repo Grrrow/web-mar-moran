@@ -28,8 +28,8 @@ const app = createApp(App)
   .use(VCalendar, {})
   .use(masonry)
   .use(VueLazyload)
-  .use(VueReCaptcha, {
-    siteKey: import.meta.env.VITE_APP_CAPTCHATOKEN,
-  })
   .use(createMetaManager())
+/*  .use(VueReCaptcha, {
+    siteKey: import.meta.env.VITE_APP_CAPTCHATOKEN,
+  })*/
 app.mount('#app')
