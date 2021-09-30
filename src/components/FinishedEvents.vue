@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { eventsCollection } from '../content/firebase'
+//import { eventsCollection } from '../content/firebase'
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import SocialMediaContainer from './SocialMediaContainer.vue'
 import FinishedEventCard from './FinishedEventCard.vue'
@@ -48,11 +48,11 @@ export default {
     }
   },
   async created() {
-    const events = await eventsCollection.get()
+  /* const events = await eventsCollection.get()
     this.finishedEvents = events
       .data()
       .eventsList.filter((e) => e.date.toDate() < new Date())
-  },
+  },*/
   mounted() {
     const root = document.documentElement
     document.addEventListener('mousedown', (evt) => {
