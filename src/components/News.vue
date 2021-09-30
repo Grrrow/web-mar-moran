@@ -28,13 +28,13 @@
 import NewsCard from "./NewsCard.vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
-import { newsCollection } from '../content/firebase'
+import getNews from '../content/news'
 
 export default {
   components: {VueperSlides, VueperSlide, NewsCard},
   async created() {
-    const news =  await newsCollection.get()
-    this.newsList = news.data().newsList
+    const news =  await getNews()
+    this.newsList = news
   },
   data() {
     return{

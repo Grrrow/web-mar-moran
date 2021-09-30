@@ -5,7 +5,7 @@
       <div class="plus">
         <a href="#">+</a>
       </div>
-      <div class="centered">{{ picture.title['es'] }}</div>
+      <div class="centered">{{ picture.title }}</div>
     </div>
   </div>
 </template>

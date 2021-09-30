@@ -32,7 +32,7 @@ import { useMeta } from 'vue-meta'
 
 import Filters from '../components/Filters.vue'
 import PhotosCard from '../components/PhotosCard.vue'
-import { picturesCollection } from '../content/firebase'
+import getPictures from '../content/getPictures'
 
 export default {
   components: { PhotosCard, Filters },
@@ -53,8 +53,7 @@ export default {
     }
   },
   async created() {
-    const pictures = await picturesCollection.get()
-    this.picturesList = pictures.data().picturesList
+    this.picturesList = await getPictures()
     this.picturesList.map((picture) => {
       this.imgs.push(picture.imageUrl)
     })

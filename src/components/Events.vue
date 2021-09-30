@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { eventsCollection } from '../content/firebase'
+//import { eventsCollection } from '../content/firebase'
 
 import EventCard from './EventCard.vue'
 
@@ -24,9 +24,9 @@ export default {
         }
     },
     async created() {
-        const events =  await eventsCollection.get()
+  /*      const events =  await eventsCollection.get()
         this.eventsList = events.data().eventsList
-        console.log(this.eventsList)
+        console.log(this.eventsList)*/
     }
 }
 </script>
