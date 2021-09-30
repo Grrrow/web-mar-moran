@@ -2,6 +2,7 @@
   <div class="slider">
     <vueper-slides
       class="no-shadow"
+      lazy
       :autoplay="sliderList.length > 0"
       :visible-slides="1"
       slide-multiple
