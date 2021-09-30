@@ -66,8 +66,8 @@
             },
             async recaptcha(){
                 // (optional) Wait until recaptcha has been loaded.
-                await this.$recaptchaLoaded()
-                this.token = await this.$recaptcha('login')
+               // await this.$recaptchaLoaded()
+               // this.token = await this.$recaptcha('login')
             },
             resetForm(){
                 this.name="";
