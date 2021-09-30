@@ -5,11 +5,7 @@
         <audio :id="`${id}`">
           <source :id="`${id}`" :src="source" type="audio/mpeg" />
         </audio>
-        <img
-          :class="`album ${playing ? 'goleft' : ''}`"
-          src="../assets/images/music/lunaclara.jpeg"
-          alt=""
-        />
+        <img v-lazy="album.coverURL" :class="`album ${playing ? 'goleft' : ''}`"/>
         <img
           :class="`needle ${playing ? 'visible' : ''}`"
           src="../assets/images/music/needle.png"
@@ -97,7 +93,7 @@ export default {
       slider: '',
     }
   },
-  mounted() {
+  beforeUpdate() {
     this.source = this.album.srcSong[this.currentTrack].url
     this.mtitle = this.album.songTitle[this.currentTrack]
     this.music = document.getElementById(this.id)
