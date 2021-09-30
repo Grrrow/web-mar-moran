@@ -51,8 +51,8 @@ export default {
   /* const events = await eventsCollection.get()
     this.finishedEvents = events
       .data()
-      .eventsList.filter((e) => e.date.toDate() < new Date())
-  },*/
+      .eventsList.filter((e) => e.date.toDate() < new Date())*/
+  },
   mounted() {
     const root = document.documentElement
     document.addEventListener('mousedown', (evt) => {
