@@ -4,10 +4,10 @@
       <FinishedEvents /> 
       <h1>{{ $t('events.title') }}</h1>
       <div class="responsiveCalendar">
-        <v-calendar
+        <Calendar 
           :masks="masks"
           transition="slide-v"
-          :rows="$screens({ default: 1, lg: 1 })"
+          :rows="1"
           :is-expanded="true"
           :attributes="attributes"
           @dayclick="dayClicked"
@@ -29,6 +29,8 @@ import EventCalendar from '../components/EventCalendar.vue'
 import FinishedEvents from '../components/FinishedEvents.vue'
 import getEvents from '../content/events'
 import '../assets/styles/Calendar.css'
+import { Calendar } from 'v-calendar';
+
 
 export default {
   setup() {
@@ -37,7 +39,7 @@ export default {
       htmlAttrs: { lang: 'es', amp: true },
     })
   },
-  components: { EventCalendar, FinishedEvents },
+  components: { EventCalendar, FinishedEvents, Calendar },
   async created() {
     const events = await getEvents()
     this.eventsList = events

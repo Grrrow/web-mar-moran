@@ -9,7 +9,6 @@ import { createMetaManager } from 'vue-meta'
 
 import { messages } from './traductions/locale.js'
 import VueEasyLightBox from 'vue-easy-lightbox'
-import VCalendar from 'v-calendar'
 import VueLazyload from '@jambonn/vue-lazyload'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
@@ -25,7 +24,6 @@ const app = createApp(App)
   .use(router)
   .use(i18n)
   .use(VueEasyLightBox)
-  .use(VCalendar, {})
   .use(masonry)
   .use(VueLazyload)
   .use(createMetaManager())
