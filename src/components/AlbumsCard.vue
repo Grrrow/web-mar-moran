@@ -7,7 +7,7 @@
         </audio>
         <img
           :class="`album ${playing ? 'goleft' : ''}`"
-          src="../assets/images/music/lunaclara.jpeg"
+          src=""
           alt=""
         />
         <img
