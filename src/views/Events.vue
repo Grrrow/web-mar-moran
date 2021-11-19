@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <div class="container">
-      <FinishedEvents /> 
       <h1>{{ $t('events.title') }}</h1>
       <div class="responsiveCalendar">
         <Calendar 
@@ -65,11 +64,13 @@ export default {
   },
   methods: {
     dayClicked(day) {
+      console.log(day)
       this.selectedDay = day
     },
     sortEventsByDate() {
+      console.log
       this.eventsList.sort((a, b) => {
-        return new Date(a.date.toDate().toDateString()) - new Date(b.date.toDate().toDateString())
+        return new Date(a.date) - new Date(b.date)
       })
       this.firstEvent = this.eventsList[0]
     },
@@ -77,9 +78,8 @@ export default {
   computed: {
     attributes() {
       return this.eventsList.map((event) => {
-        console.log(new Date(event.date.toDate()))
         return {
-          dates: new Date(event.date.toDate().toDateString()),
+          dates: new Date(event.date),
           customData: event,
           image: event.poster,
           highlight: event.color,

@@ -33,6 +33,14 @@ export default {
           filterWord: 'studio',
           text: 'Estudio',
         },
+        {
+          filterWord: 'concurso',
+          text: 'Concursos',
+        },
+        {
+          filterWord: 'productions',
+          text: 'Produciones',
+        },
       ],
     }
   },
@@ -49,7 +57,7 @@ export default {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  width: 300px;
+  min-width: 300px;
 }
 .filters p {
   cursor: pointer;

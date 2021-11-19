@@ -1,36 +1,32 @@
 <template>
-  <div
-    class="event-card"
-    :style="{ backgroundImage: 'url(' + event.poster + ')' }"
-  >
-    <div @click="shareEvent()" class="shareButton">
-      <ShareIcon color="white" width="30" />
-    </div>
-    <div class="info">
-      <h3 class="info__title">{{ event.title }}</h3>
-      <h4 class="info__role">- {{ event.role }} -</h4>
-      <p class="info__date">
-        {{ event.location }} |
-        {{
-          event.date.toDate().toLocaleDateString('es-ES', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })
-        }}
-      </p>
-      <div class="extra-info">
-        <p v-if="event.resume" class="resume">{{ event.resume }}</p>
-        <a v-if="event.link" :href="event.link" class="actions"> Entradas </a>
+  <a target="_blank" :href="event.link" class="actions">
+    <div
+      class="event-card"
+      :style="{ backgroundImage: 'url(' + event.poster + ')' }"
+    >
+      <div @click="shareEvent()" class="shareButton">
+        <ShareIcon color="white" width="30" />
       </div>
+      <div class="info">
+        <h3 class="info__title">{{ event.title }}</h3>
+        <h4 class="info__role">- {{ event.role }} -</h4>
+        <p class="info__date">
+          {{ event.location }} |
+          {{
+            new Date(event.date).toLocaleString()
+          }}
+        </p>
+        <div class="extra-info">
+          <p v-if="event.resume" class="resume">{{ event.resume }}</p>
+        </div>
+      </div>
+      <SocialMediaContainer
+        v-if="showShareModal"
+        v-on:close="closeModal()"
+        :url="event.link"
+      />
     </div>
-    <SocialMediaContainer
-      v-if="showShareModal"
-      v-on:close="closeModal()"
-      :url="event.link"
-    />
-  </div>
+  </a>
 </template>
 <script>
 import SocialMediaContainer from './SocialMediaContainer.vue'
@@ -53,7 +49,7 @@ export default {
       if (navigator.share) {
         const shareData = {
           title: this.event.title,
-          text: 'Mi gente, se viene actuación, nos echamos un cafelito y nos vamos pa Oviedo',
+          text: '',
           url: this.event.link,
         }
         navigator.share(shareData)

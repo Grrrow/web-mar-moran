@@ -3,7 +3,6 @@
   <div class="main">
     <div class="container">
       <h1>{{ $t('videos.title') }}</h1>
-      <Filters :filterWord="filterWord" @setFilter="changeFilter" />
       <div class="main_videos">
         <div
           v-for="(video, index) in filterVideos"

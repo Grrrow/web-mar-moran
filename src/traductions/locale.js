@@ -79,6 +79,9 @@ export const messages = {
         success: 'Message sent correctly, we will reply as soon as possible.',
       },
     },
+    music: {
+      title: 'Music'
+    }
   },
   es: {
     header: {
@@ -147,6 +150,9 @@ export const messages = {
     },
     videos: {
       title: 'Videos',
+    },
+    music: {
+      title: 'Música'
     },
     contact: {
       title: 'Contact',

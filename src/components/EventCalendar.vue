@@ -7,14 +7,12 @@
       {{ noDate }}
     </h2>
     <div v-if="!empty" class="eventInfo">
-      <div class="eventImage">
+      <div v-if="eventMap.poster" class="eventImage">
         <img v-lazy="eventMap.poster" />
       </div>
       <div class="eventDescription">
         <div class="ornamentText" >
-          <img src="../assets/images/ornament.png" alt="" />
           <h3 class="locationTitle">{{ eventMap.location }}</h3>
-          <img src="../assets/images/ornamentvolt.png" alt="" />
         </div>
         <div class="dateContent">
           <p class="paragraph">
@@ -29,9 +27,7 @@
     </div>
     <div v-else>
       <div class="ornamentText">
-        <img src="../assets/images/ornament.png" alt="" />
         <h3>No hay eventos programados para este día</h3>
-        <img src="../assets/images/ornamentvolt.png" alt="" />
       </div>
     </div>
   </div>
@@ -90,12 +86,10 @@ export default {
     },
     checkDate() {
       if (this.eventMap.date) {
-        this.dateLocalString = this.eventMap.date
-          .toDate()
-          .toLocaleDateString('es-ES', this.dateOptions)
-        this.dateTimeString = this.eventMap.date
-          .toDate()
-          .toLocaleTimeString('es-ES', this.hourOptions)
+        let minutes = new Date(this.eventMap.date).getMinutes().toString()
+        minutes = minutes.length === 1 ? `0${minutes}` : minutes
+        this.dateLocalString = new Date(this.eventMap.date).toLocaleDateString()
+        this.dateTimeString = `${new Date(this.eventMap.date).getHours()}:${minutes}`
       }
     },
   },

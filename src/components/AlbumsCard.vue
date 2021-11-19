@@ -3,7 +3,7 @@
     <div class="divrelative">
       <div class="album_content">
         <audio :id="`${id}`">
-          <source :id="`${id}`" :src="source" type="audio/mpeg" />
+          <source :id="`${id}`" :src="source" />
         </audio>
         <img v-lazy="album.coverURL" :class="`album ${playing ? 'goleft' : ''}`"/>
         <img
@@ -93,8 +93,10 @@ export default {
       slider: '',
     }
   },
-  beforeUpdate() {
-    this.source = this.album.srcSong[this.currentTrack].url
+  mounted() {
+    console.log(this.album.srcSong)
+    this.source = this.album.srcSong
+    console.log(this.source)
     this.mtitle = this.album.songTitle[this.currentTrack]
     this.music = document.getElementById(this.id)
   },
@@ -154,10 +156,12 @@ export default {
 
 .divrelative {
   position: relative;
+  width: 100%;
 }
 
 .album {
   position: relative;
+  width: 100%;
   z-index: 2;
 }
 .needle {
@@ -169,6 +173,7 @@ export default {
 }
 .cd {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 0;
@@ -179,16 +184,20 @@ export default {
   justify-content: space-around;
 }
 .control {
-  width: 10% !important;
-  border-radius: 999999999999px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* padding: 5px; */
+  display: flex;
   background-color: white;
   color: rgb(221, 67, 119);
   position: absolute;
   top: 25%;
-  left: 45%;
+  left: calc(50% - 20px);
   z-index: 3;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 .title {
   font-size: 22px;
@@ -200,9 +209,6 @@ export default {
 }
 .subtitle {
   color: white;
-}
-.divrelative * {
-  width: 100%;
 }
 .goleft {
   opacity: 0;
@@ -283,62 +289,6 @@ input[type='range']::-webkit-slider-thumb {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@media screen and (min-width: 560px) and (max-width: 700px) {
-  .control {
-    width: 10% !important;
-    border-radius: 999999999999px;
-    padding: 10px 5px;
-    background-color: white;
-    color: rgb(221, 67, 119);
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    z-index: 3;
-    cursor: pointer;
-  }
-}
-@media (max-width: 375px) {
-  .control {
-    width: 10% !important;
-    border-radius: 999999999999px;
-    padding: 5px 10px;
-    background-color: white;
-    color: rgb(221, 67, 119);
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    z-index: 3;
-    cursor: pointer;
-  }
-}
-@media (width: 540px) {
-  .control {
-    width: 10% !important;
-    border-radius: 999999999999px;
-    padding: 5px;
-    background-color: white;
-    color: rgb(221, 67, 119);
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    z-index: 3;
-    cursor: pointer;
-  }
-}
-@media (width: 280px) {
-  .control {
-    width: 10% !important;
-    border-radius: 999999999999px;
-    padding: 5px 10px;
-    background-color: white;
-    color: rgb(221, 67, 119);
-    position: absolute;
-    top: 15%;
-    left: 39%;
-    z-index: 3;
-    cursor: pointer;
   }
 }
 </style>

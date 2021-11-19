@@ -4,10 +4,10 @@
         <div class="container">
             <div class="contact-info">
                 <h1 class="contact-info__title">{{ $t('contact.manager') }}</h1>
-                <p>Name</p>
-                <p>Company</p>
-                <p>Number</p>
-                <a href="mailto:email@email.com">email</a>
+                <p>Javier Santacana</p>
+                <p>A Piacere Musik</p>
+                <p>+34 663 93 38 53</p>
+                <a class="ligth-link" href="mailto:javiersantacana@a-piacere-musik.es">javiersantacana@a-piacere-musik.es</a>
                 <SocialBanner />
             </div>
             <form id="msform" @submit.prevent="sendEmail">
@@ -176,5 +176,9 @@
             max-width: 767px;
         }
       }
+    a.ligth-link{
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
 
 </style>
