@@ -20,7 +20,7 @@
                   <option value="en">en</option>
                   <option value="es">es</option>
             </select>
-            <Slide class="menu-mobile" right>
+            <Slide class="menu-mobile" :closeOnNavigation="true" right>
                 <router-link to="/">Home</router-link>
                 <router-link to="photos">{{ $t('header.photo') }}</router-link>
                 <router-link to="music">{{ $t('header.music') }}</router-link>
