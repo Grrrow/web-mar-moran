@@ -12,9 +12,7 @@
         <h4 class="info__role">- {{ event.role }} -</h4>
         <p class="info__date">
           {{ event.location }} |
-          {{
-            new Date(event.date).toLocaleString()
-          }}
+          {{ new Date(event.date).toLocaleString() }}
         </p>
         <div class="extra-info">
           <p v-if="event.resume" class="resume">{{ event.resume }}</p>
@@ -67,6 +65,7 @@ export default {
 .event-card {
   height: 520px;
   width: 340px;
+  margin-bottom: 25px;
   background-size: cover;
   position: relative;
   transition: all 0.4s linear;

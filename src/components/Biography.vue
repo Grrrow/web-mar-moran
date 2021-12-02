@@ -160,6 +160,7 @@ export default {
     }
     .biograpy.full .container .content{
                 max-width: 500px;
+                margin-top: 25px;
 
     }
 }
@@ -190,7 +191,7 @@ export default {
     text-align: left;
   }
   .content.margincontent{
-      margin: 1rem;
+      margin: 2rem;
   }
 }
 </style>

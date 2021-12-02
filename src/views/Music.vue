@@ -67,27 +67,21 @@ export default {
 }
 @media (max-width: 1300px) {
   .main_albums {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
   }
   .albums {
     width: 40%;
-    margin: 10px 0;
     padding: 0 15px;
   }
 }
 @media (max-width: 700px) {
   .main_albums {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
   }
   .albums {
     width: 90%;
-    margin: 10px 0;
     padding: 0 15px;
   }
 }

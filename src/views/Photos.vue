@@ -5,14 +5,14 @@
       <h1>{{ $t('photos.title') }}</h1>
       <Filters :filterWord="filterWord" @setFilter="changeFilter" />
       <masonry :cols="{ default: 3, 1000: 3, 700: 2, 400: 1 }" :gutter="10">
-          <div
-            v-for="(picture, index) in filterPictures"
-            :key="index"
-            :class="`${changePictures ? 'scale-out' : 'scale-in'}`"
-            @click="show(index)"
-          >
-            <PhotosCard :picture="picture"/>
-          </div>    
+        <div
+          v-for="(picture, index) in filterPictures"
+          :key="index"
+          :class="`${changePictures ? 'scale-out' : 'scale-in'}`"
+          @click="show(index)"
+        >
+          <PhotosCard :picture="picture" />
+        </div>
       </masonry>
     </div>
     <vue-easy-lightbox
@@ -68,12 +68,12 @@ export default {
     },
     changeFilter(newFilter) {
       this.imgs = []
-      setTimeout(() => {  
+      setTimeout(() => {
         this.changePictures = false
-      }, 500);
+      }, 700)
       setTimeout(() => {
         this.filterWord = newFilter
-      }, 500);
+      }, 700)
       this.picturesList.map((picture) => {
         if (picture.filter === newFilter) this.imgs.push(picture.imageUrl)
       })
