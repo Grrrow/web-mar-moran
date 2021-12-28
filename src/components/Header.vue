@@ -16,7 +16,7 @@
                     <option value="es">ES</option>
                 </select>
             </div>
-            <select class="languaje-mobile" v-model="$i18n.locale">
+            <select class="languaje-modal languaje-mobile" v-model="$i18n.locale">
                   <option value="en">en</option>
                   <option value="es">es</option>
             </select>
