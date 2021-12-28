@@ -154,7 +154,7 @@ export const messages = {
       title: 'Música'
     },
     contact: {
-      title: 'Contact',
+      title: 'Contacto',
       manager: 'Representante',
       form: {
         name: 'Tu nombre',
