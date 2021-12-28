@@ -106,7 +106,7 @@ export const messages = {
         paragraph4:
           'Mar ha sido premiada con el Premio Extraordinario y la Beca de Juventudes Musicales de la Comunidad de Madrid en el año 2015, Premio fin de carrera "Lola Rodriguez de Aragón" 2020, Primer Premi Absolut en el IV Concurs Internacional de Cant "Martín y Soler" 2021 en Polinyà del Xúquer (Valencia), 3º Premio en el XXXVIII Concurso Internacional de Canto "Ciudad de Logroño" 2021 en La Rioja en la categoría de voces femeninas, 1º premio en el 9º Certamen Internacional de Habaneras para Solistas Líricos 2021 en Torrevieja, 1º premio en XXIV Certamen Internacional de Jóvenes intérpretes Pedro Bote en Villafranca de lod Barros y el 2º premio en el IV Concurso de Canto Compostela Lirica 2021 en Santiago de Compostela.',
         paragraph5:
-          'Recientemente ha lanzado su primer disco “Luna clara” junto al pianista Aurelio Viribay respaldado por el sello discográfico norteamericano Odradek Records, que recogen la integral de canciones del compositor español Jesús García Leoz. Próximamente debutará el rol "Reina de la Noche" de la Ópera "La Flauta Mágica" de Mozart en la temporada 21/22 del Teatro Campoamor de Oviedo.',
+          'Recientemente ha lanzado su primer disco “Luna clara” junto al pianista Aurelio Viribay respaldado por el sello discográfico norteamericano Odradek Records, que recogen la integral de canciones del compositor español Jesús García Leoz y ha debutado el rol "Reina de la Noche" de la Ópera "La Flauta Mágica" de Mozart en la temporada 21/22 del Teatro Campoamor de Oviedo.',
       },
       full: {
         paragraph1:
