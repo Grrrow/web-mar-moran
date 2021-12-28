@@ -40,12 +40,7 @@ export default {
     return{
       newsList: []
     }
-  },
-  async mounted() {
-    this.newsList = await news()
-    console.log(this.newsList)
   }
-
 }
 </script>
 

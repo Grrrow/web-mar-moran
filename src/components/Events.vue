@@ -29,12 +29,10 @@ export default {
   },
   async created() {
     const events = await eventsCollection()
-    console.log(events)
-    this.eventsList = events
-      .sort((a, b) => {
+    this.eventsList = events.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
-      .filter((show) => new Date(show.date) >= new Date())
+      //.filter((show) => new Date(show.date) >= new Date())
   },
 }
 </script>

@@ -130,6 +130,7 @@
 <style>
 .social-banner {
   height: 64px;
+  margin-top: 2rem;
 }
 .social-banner svg {
   width: 25px;

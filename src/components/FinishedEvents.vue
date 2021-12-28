@@ -64,7 +64,6 @@ export default {
   },
   methods: {
     shareEvent({ title, link }) {
-      console.log(link)
       if (navigator.share) {
         const shareData = {
           title: title,

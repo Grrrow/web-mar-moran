@@ -97,9 +97,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.album.srcSong)
     this.source = this.album.srcSong
-    console.log(this.source)
     this.mtitle = this.album.songTitle[this.currentTrack]
     this.music = document.getElementById(this.id)
   },

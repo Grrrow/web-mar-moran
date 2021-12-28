@@ -15,7 +15,6 @@ export default async () => {
     }
   )
   const data = await response.json()
-  console.log(data)
   const result = data.records.map((item) => sanetizePicture(item.fields))
   return result
 }

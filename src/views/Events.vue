@@ -42,7 +42,6 @@ export default {
   async created() {
     const events = await getEvents()
     this.eventsList = events
-    console.log(this.eventsList)
     this.sortEventsByDate()
     this.getNextEvent()
   },
@@ -65,7 +64,6 @@ export default {
   },
   methods: {
     dayClicked(day) {
-      console.log(day)
       this.selectedDay = day
     },
     sortEventsByDate() {

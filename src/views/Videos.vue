@@ -40,7 +40,6 @@ export default {
   async created() {
     const videos = await getVideos()
     this.videosList = videos
-    console.log(videos)
   },
   data() {
     return {
@@ -68,7 +67,6 @@ export default {
   },
   computed: {
     filterVideos() {
-      console.log(this.videosList)
       return this.videosList.filter((video) => {
           return !this.filterWord === 'todo'?
           video.filter.includes(this.filterWord) :

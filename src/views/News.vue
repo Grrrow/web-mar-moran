@@ -32,7 +32,6 @@ export default {
   async created() {
     const news =  await getNews()
     this.news = news
-    console.log(news)
   },
   data() {
     return {

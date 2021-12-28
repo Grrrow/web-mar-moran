@@ -16,6 +16,5 @@ export default async () => {
       });
     const data = await response.json()
     const result = data.records.map(item => sanetizeSliderObject(item.fields))
-    console.log(result)
     return result
 }
