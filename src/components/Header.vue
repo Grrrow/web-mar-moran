@@ -24,7 +24,7 @@
                 <router-link to="/">Home</router-link>
                 <router-link to="photos">{{ $t('header.photo') }}</router-link>
                 <router-link to="music">{{ $t('header.music') }}</router-link>
-                <router-link to="video">{{ $t('header.video') }}</router-link>
+                <router-link to="videos">{{ $t('header.video') }}</router-link>
                 <router-link to="biography">{{ $t('header.biography') }}</router-link>
                 <router-link to="events">{{ $t('header.events') }}</router-link>
                 <router-link to="contact">{{ $t('header.contact') }}</router-link>
