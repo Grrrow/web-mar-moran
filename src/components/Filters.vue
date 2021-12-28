@@ -56,10 +56,11 @@ export default {
 .filters {
   display: flex;
   justify-content: space-around;
+  overflow-x: auto;
   margin: 0 auto;
-  min-width: 300px;
 }
 .filters p {
+  min-width: 80px;
   cursor: pointer;
   position: relative;
 }
@@ -83,15 +84,13 @@ p:not(.underline):hover:after {
   border-bottom: rgb(221, 67, 119) 2px solid;
 }
 
-@media (width: 320px) {
-  p {
+@media (max-width: 490px) {
+  p{
+    width: 80px;
     font-size: 12px;
   }
-  .filters {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 200px;
+  .filters{
+    justify-content: unset;
   }
 }
 </style>

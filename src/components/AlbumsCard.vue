@@ -5,7 +5,10 @@
         <audio :id="`${id}`">
           <source :id="`${id}`" :src="source" />
         </audio>
-        <img v-lazy="album.coverURL" :class="`album ${playing ? 'goleft' : ''}`"/>
+        <img
+          v-lazy="album.coverURL"
+          :class="`album ${playing ? 'goleft' : ''}`"
+        />
         <img
           :class="`needle ${playing ? 'visible' : ''}`"
           src="../assets/images/music/needle.png"
@@ -166,6 +169,7 @@ export default {
 }
 .needle {
   position: absolute;
+  width: 270px;
   top: -40px;
   right: -40px;
   z-index: 1;
@@ -252,13 +256,13 @@ input[type='range']::-webkit-slider-thumb {
 }
 .audio_controls {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .audio_controls div {
   cursor: pointer;
 }
 .rrss {
-  display: flex !important;
+  display: flex;
   justify-content: space-around;
 }
 .audio_controls div {
