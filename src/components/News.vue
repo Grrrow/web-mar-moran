@@ -7,6 +7,7 @@
         fixed-height="400px"
         :visible-slides="4"
         slide-multiple
+        :bullets = false
         :gap="4"
         :slide-ratio="1 / 3"
         :dragging-distance="200"
@@ -64,8 +65,7 @@ h3 {
 }
 @media (max-width: 1330px) {
   .vueperslides--fixed-height.vueperslides--bullets-outside{
-  width: 91%;
-  margin: 0 auto;
+  width: 90%;
 }
 }
 </style>

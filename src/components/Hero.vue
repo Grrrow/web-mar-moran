@@ -4,15 +4,13 @@
       class="no-shadow"
       lazy
       :autoplay="sliderList.length > 0"
-      :visible-slides="1"
-      slide-multiple
-      :gap="1"
+      :bullets= false
       :slide-ratio="1 / 1.5"
       :dragging-distance="200"
-      :breakpoints="{ 800: { visibleSlides: 1 } }"
     >
       <vueper-slide
         v-for="(slider, index) in sliderList"
+        :duration= 5000
         lazy-load-on-drag
         lazy
         :key="index"
@@ -21,7 +19,7 @@
           <div>
             <img style="width: 100%" v-lazy="slider.url"/>
             <div
-              :class="`nonVisible text ${slider.position} ${slider.colorText}`"
+              :class="`text ${slider.position} ${slider.colorText}`"
             >
               <h1>{{ slider.title }}</h1>
               <p class="description">{{ slider.description }}</p>
@@ -109,166 +107,34 @@ export default {
 }
 .text {
   position: absolute;
-  padding: 10px;
-  top: 40%;
+  bottom: 0;
+  padding: 0 10px;
   font-size: 24px;
-}
-
-.text.left {
-  left: 16rem;
-  text-align: left;
-}
-.text.right {
-  right: 16rem;
-  text-align: right;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--white-00);
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .description {
   max-width: 500px;
+  text-align: center;
 }
-@media (max-width: 1500px) {
-  .text {
-    position: absolute;
-    top: 40%;
-    font-size: 24px;
-  }
-  .text.left {
-    left: 12rem;
-    text-align: left;
-  }
-  .text.right {
-    right: 12rem;
-    text-align: right;
-  }
+.text h1{
+  margin: 1rem 5px 5px 5px;
 }
-@media (max-width: 1024px) {
-  p {
-    width: 450px;
-  }
+@media (max-width: 600px) {
   .text {
-    position: absolute;
-    top: 25%;
-    font-size: 20px;
+    font-size: 12px;
   }
-  .text.left {
-    left: 4rem;
-    text-align: left;
+  .description{
+    max-width: 90%;
   }
-  .text.right {
-    right: 4rem;
-    text-align: right;
-    color: var(--white-00);
-  }
-}
-@media (max-width: 900px) {
-  .text {
-    position: absolute;
-    top: 30%;
-    font-size: 16px;
-  }
-  .text.left {
-    left: 4rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 35%;
-    right: 4rem;
-    text-align: right;
-    color: var(--white-00);
-  }
-
-  .description {
-    max-width: 300px;
-  }
-}
-@media (max-width: 550px) {
-  .text {
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: var(--border-radius);
-    color: var(--white-00);
-    position: absolute;
-    top: 10%;
-    font-size: 10px;
-  }
-  .text.left {
-    left: 4rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 10%;
-    right: 4rem;
-    text-align: right;
-  }
-
-  .description {
-    max-width: 200px;
-  }
-}
-@media (max-width: 420px) {
-  .text {
-    font-weight: 600;
-  }
-  .text.left {
-    top: 18%;
-    font-size: 8px;
-    left: 4rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 25%;
-    font-size: 8px;
-    right: 4rem;
-    text-align: right;
-  }
-}
-@media (max-width: 375px) {
-  .text {
-    font-weight: 600;
-  }
-  .text.left {
-    top: 10%;
-    font-size: 10px;
-    left: 4rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 20%;
-    font-size: 8px;
-    right: 4rem;
-    text-align: right;
-  }
-}
-@media (max-width: 360px) {
-  .text {
-    font-weight: 600;
-  }
-  .text.left {
-    top: 25%;
-    font-size: 8px;
-    left: 4rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 20%;
-    font-size: 8px;
-    right: 4rem;
-    text-align: right;
-  }
-}
-@media (max-width: 320px) {
-  .text {
-    font-weight: 600;
-  }
-  .text.left {
-    top: 18%;
-    font-size: 8px;
-    left: 3rem;
-    text-align: left;
-  }
-  .text.right {
-    top: 20%;
-    font-size: 8px;
-    right: 3rem;
-    text-align: right;
+  .text h1{
+    margin: 5px 0 0 0;
   }
 }
 </style>
