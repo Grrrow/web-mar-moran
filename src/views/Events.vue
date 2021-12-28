@@ -44,6 +44,7 @@ export default {
     this.eventsList = events
     console.log(this.eventsList)
     this.sortEventsByDate()
+    this.getNextEvent()
   },
   data() {
     return {
@@ -68,12 +69,14 @@ export default {
       this.selectedDay = day
     },
     sortEventsByDate() {
-      console.log
       this.eventsList.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
-      this.firstEvent = this.eventsList[0]
     },
+    getNextEvent(){
+      const nextEvents = this.eventsList.filter(show => new Date(show.date) >= new Date())
+      this.firstEvent = nextEvents[0]
+    }
   },
   computed: {
     attributes() {
