@@ -159,8 +159,8 @@ export default {
         position: relative;
     }
     .biograpy.full .container .content{
-                max-width: 500px;
-                margin-top: 25px;
+        max-width: 500px;
+        margin-top: 90px;
 
     }
 }
