@@ -16,7 +16,12 @@
         <EventCalendar :event="selectedDay" />
       </div>
       <div v-else>
-        <EventCalendar :first="firstEvent" />
+        <div v-if="firstEvent">
+          <EventCalendar :first="firstEvent" />
+        </div>
+        <div v-else class="soonMessage">
+          <h1>Proximamente anunciaremos nuevas fechas</h1>
+        </div>
       </div>
     </div>
   </div>
@@ -73,7 +78,7 @@ export default {
     },
     getNextEvent(){
       const nextEvents = this.eventsList.filter(show => new Date(show.date) >= new Date())
-      this.firstEvent = nextEvents[0]
+      this.firstEvent = nextEvents.length && nextEvents[0]
     }
   },
   computed: {
@@ -109,4 +114,13 @@ h1 {
   margin: 0 auto;
   width: 100%;
 }
+
+.soonMessage{
+  padding: 20px;
+}
+
+.soonMessage h1{
+  font-style: italic;
+}
+
 </style>
