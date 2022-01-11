@@ -6,6 +6,7 @@
     <News />
     <Events />
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Biography from '../components/Biography.vue'
 import News from '../components/News.vue'
 import Events from '../components/Events.vue'
 import Contact from '../components/Contact.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   setup(){
@@ -30,7 +32,8 @@ export default {
     Biography,
     News,
     Events,
-    Contact
+    Contact,
+    Footer
   }
 }
 </script>
