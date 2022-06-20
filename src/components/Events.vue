@@ -29,7 +29,9 @@ export default {
   },
   async created() {
     const events = await eventsCollection()
-    this.eventsList = events.sort((a, b) => {
+    
+    this.eventsList = events.filter(event => new Date(event.date) > new Date())
+    this.eventsList = this.eventsList.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
       //.filter((show) => new Date(show.date) >= new Date())

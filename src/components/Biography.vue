@@ -2,8 +2,8 @@
     <div :class="{biograpy: true, 'full': full}">
         <div class="container">
             <div :class="{photofull: full, photo: !full, 'full': !full}">
-                <img v-if="full" loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/IMG_9508-2-scaled.jpg" alt="">
-                <img v-else loading="lazy" class="picture" src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/CF160358.jpg" alt="">
+                <img v-if="full" loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/5/5/1656547200000/9mCPrI6WXSkpOyupwWdJbA/p67opWvaBU11rNF80FzhSfJHON5n0oYewwWKO-4beE4NDhH1qXatIjFfmFvioL2tB297WABBRrxDQGvJ17Wvpw/uLM8VptLUsd7J54jAvWy7U7u_mqItlnq-7DvL5UjqPA" alt="Mar Morán picture">
+                <img v-else loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/5/5/1656547200000/7EhA33TXzj2fh9qXRIFcTA/BmnF-UV6StYrXNvT-olXxRRlDGhNHf-s6Np73e29a2I6tyLMhw3kr1Lvv0epqkzJr6gs8i7WAeqsleWFMyrbmw/FNvzKZfNaqn_UmyvPcyj14mEK3whoTWmI9vxSW1j_7U" alt="Mar Moran Picture">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="textfull">
@@ -17,10 +17,6 @@
                     <p>{{ $t('biography.full.paragraph7') }}</p>
                     <p>{{ $t('biography.full.paragraph8') }}</p>
                     <p>{{ $t('biography.full.paragraph9') }}</p>
-                    <p>{{ $t('biography.full.paragraph10') }}</p>
-                    <p>{{ $t('biography.full.paragraph11') }}</p>
-                    <p>{{ $t('biography.full.paragraph12') }}</p>
-                    <p>{{ $t('biography.full.paragraph13') }}</p>
                     <div class="sign">
                         <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
                     </div>
@@ -31,7 +27,16 @@
                     <p>{{ $t('biography.resume.paragraph2') }}</p>
                     <p>{{ $t('biography.resume.paragraph3') }}</p>
                     <p>{{ $t('biography.resume.paragraph4') }}</p>
+                    <ul>
+                       <li>Primer Premio Absoluto en el IV Concurs Internacional de Cant “Martín y Soler” de Valencia (2021).</li>
+                       <li>Primer Premio otorgado por el jurado en el 9º Certamen Internacional de Habaneras para Solistas Líricos dentro del marco del 67 Certamen internacional de Habaneras y Polifonía (2021).</li>
+                       <li>Primer Premio en el XXVI Certamen Internacional de Jóvenes Intérpretes “Pedro Bote” (2021).</li>
+                       <li>Tercer Premio en la XXXVIII Concurso Internacional de Canto “Ciudad de Logroño - La Rioja” en la categoría de voces femeninas (2021).</li>
+                       <li>Segundo Premio en el IV Concurso de Canto “Compostela Lírica” (2021).</li>
+                       <li>“Premio Speciale Donizetti” en el XIV Concorso Internazionale di Canto Lírico “Giulio Neri” en Siena, Italia, a la mejor interpretación de un aria de Gaetano Donizetti (2022)</li>
+                    </ul>
                     <p>{{ $t('biography.resume.paragraph5') }}</p>
+                    <p>{{ $t('biography.resume.paragraph6') }}</p>
                     <div class="sign">
                         <router-link class="link" to="/biography">
                             {{ $t('biography.knowMore') }}
@@ -122,7 +127,7 @@ export default {
 }
 .photo{
     width: 526px;
-    height: 365px;;
+    height: 750px;;
     border: 1px solid #ffff;
     padding: 2rem;
     position: relative;
@@ -148,6 +153,9 @@ export default {
     position: absolute;
     left: 2rem;
     top: 2rem;
+}
+li{
+    margin: 1rem 0;
 }
 @media (max-width: 1240px) {
    .biograpy.full.container, .container {
