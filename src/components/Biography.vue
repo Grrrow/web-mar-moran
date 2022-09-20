@@ -31,8 +31,9 @@
                        <li>Primer Premio Absoluto en el IV Concurs Internacional de Cant “Martín y Soler” de Valencia (2021).</li>
                        <li>Primer Premio otorgado por el jurado en el 9º Certamen Internacional de Habaneras para Solistas Líricos dentro del marco del 67 Certamen internacional de Habaneras y Polifonía (2021).</li>
                        <li>Primer Premio en el XXVI Certamen Internacional de Jóvenes Intérpretes “Pedro Bote” (2021).</li>
-                       <li>Tercer Premio en la XXXVIII Concurso Internacional de Canto “Ciudad de Logroño - La Rioja” en la categoría de voces femeninas (2021).</li>
+                       <li>1° Premio en la 7° edición del “Premio José Augusto Alegria” Concurs Internacional para Jovens Intérpretes de Évora 2022(Portugal)</li>
                        <li>Segundo Premio en el IV Concurso de Canto “Compostela Lírica” (2021).</li>
+                       <li>Tercer Premio en la XXXVIII Concurso Internacional de Canto “Ciudad de Logroño - La Rioja” en la categoría de voces femeninas (2021).</li>
                        <li>“Premio Speciale Donizetti” en el XIV Concorso Internazionale di Canto Lírico “Giulio Neri” en Siena, Italia, a la mejor interpretación de un aria de Gaetano Donizetti (2022)</li>
                     </ul>
                     <p>{{ $t('biography.resume.paragraph5') }}</p>
