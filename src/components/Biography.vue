@@ -3,7 +3,7 @@
         <div class="container">
             <div :class="{photofull: full, photo: !full, 'full': !full}">
                 <img v-if="full" loading="lazy" class="picture" src="https://dl.airtable.com/.attachmentThumbnails/62ac311fb9814c9db3b78bec19504474/de0952cd" alt="Mar Morán picture">
-                <img v-else loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/5/5/1656547200000/7EhA33TXzj2fh9qXRIFcTA/BmnF-UV6StYrXNvT-olXxRRlDGhNHf-s6Np73e29a2I6tyLMhw3kr1Lvv0epqkzJr6gs8i7WAeqsleWFMyrbmw/FNvzKZfNaqn_UmyvPcyj14mEK3whoTWmI9vxSW1j_7U" alt="Mar Moran Picture">
+                <img v-else loading="lazy" class="picture" src="https://dl.airtable.com/.attachmentThumbnails/c4ae69fda3dafc8b72407335cdc37274/58f711a0" alt="Mar Moran Picture">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="textfull">
