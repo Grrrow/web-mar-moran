@@ -2,8 +2,8 @@
     <div :class="{biograpy: true, 'full': full}">
         <div class="container">
             <div :class="{photofull: full, photo: !full, 'full': !full}">
-                <img v-if="full" loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/5/5/1656547200000/9mCPrI6WXSkpOyupwWdJbA/p67opWvaBU11rNF80FzhSfJHON5n0oYewwWKO-4beE4NDhH1qXatIjFfmFvioL2tB297WABBRrxDQGvJ17Wvpw/uLM8VptLUsd7J54jAvWy7U7u_mqItlnq-7DvL5UjqPA" alt="Mar Morán picture">
-                <img v-else loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/5/5/1656547200000/7EhA33TXzj2fh9qXRIFcTA/BmnF-UV6StYrXNvT-olXxRRlDGhNHf-s6Np73e29a2I6tyLMhw3kr1Lvv0epqkzJr6gs8i7WAeqsleWFMyrbmw/FNvzKZfNaqn_UmyvPcyj14mEK3whoTWmI9vxSW1j_7U" alt="Mar Moran Picture">
+                <img v-if="full" loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/17/17/1684202400000/qx_wid6BNLdwvIgGHvJ3QQ/dW5srpYxJ2yU0ruwcV2UfoFTxyN-mKZfFOWGfncAcSYa5MFpvkRfB3ssAn1t-ii7jEKo5OV__DUBOHuZctii5g/htXovCxXQUYzk2YY7OJ-j76qhVVhM0fPcwI59hFU9ag" alt="Mar Morán picture">
+                <img v-else loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/17/17/1684202400000/qx_wid6BNLdwvIgGHvJ3QQ/dW5srpYxJ2yU0ruwcV2UfoFTxyN-mKZfFOWGfncAcSYa5MFpvkRfB3ssAn1t-ii7jEKo5OV__DUBOHuZctii5g/htXovCxXQUYzk2YY7OJ-j76qhVVhM0fPcwI59hFU9ag" alt="Mar Moran Picture">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="textfull">
@@ -175,7 +175,7 @@ li{
 @media (max-width: 650px) {
   .photo {
     width: 250px;
-    height: 200px;
+    height: 400px;
   }
   .photo img {
     width: 300px;
