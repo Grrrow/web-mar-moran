@@ -24,6 +24,11 @@
                        <li>Segundo Premio en el IV Concurso de Canto “Compostela Lírica” (2021).</li>
                        <li>Tercer Premio en la XXXVIII Concurso Internacional de Canto “Ciudad de Logroño - La Rioja” en la categoría de voces femeninas (2021).</li>
                        <li>“Premio Speciale Donizetti” en el XIV Concorso Internazionale di Canto Lírico “Giulio Neri” en Siena, Italia, a la mejor interpretación de un aria de Gaetano Donizetti (2022)</li>
+                       <li>1° Premio en la 7th Edición del "Premio José Augusto Alegría  Concurs Internacional para Jovens Intérpretes" de Évora (Portugal) </li>
+                       <li>“Special Prize of Confiture Giudici for Charming Voice” en el concurso “Córsica Lírica 2022” (Córcega- France) </li>
+                       <li>“Concert Prize” Otorgado por el Lyric Theater of Crete en la 3rd Edicion del International Competition “Virgilijus Noreika” for singers (Vilnius - Lituania)</li>
+                       <li>“Special Award: Les Veus del Monestir.” en el  Concurs Internacional de Música Les Corts (Barcelona - Spain).</li>
+
                     </ul>                    <p>{{ $t('biography.full.paragraph9') }}</p>
                     <div class="sign">
                         <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">

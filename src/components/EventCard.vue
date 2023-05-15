@@ -66,7 +66,8 @@ export default {
   height: 520px;
   width: 340px;
   margin-bottom: 25px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   transition: all 0.4s linear;
   cursor: pointer;

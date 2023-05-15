@@ -1,23 +1,7 @@
 <template>
   <div class="main">
     <div class="container">
-      <h1>{{ $t('events.title') }}</h1>
-      <div class="responsiveCalendar">
-        <Calendar 
-          :masks="masks"
-          transition="slide-v"
-          :rows="1"
-          :is-expanded="true"
-          :attributes="attributes"
-          @dayclick="dayClicked"
-        />
-      </div>
-      <div v-if="selectedDay">
-        <EventCalendar :event="selectedDay" />
-      </div>
-      <div v-else>
-        <EventCalendar :first="firstEvent" />
-      </div>
+      <Events />
     </div>
   </div>
 </template>
@@ -26,6 +10,7 @@
 import { useMeta } from 'vue-meta'
 import EventCalendar from '../components/EventCalendar.vue'
 import FinishedEvents from '../components/FinishedEvents.vue'
+import Events from '../components/Events.vue'
 import getEvents from '../content/events'
 import '../assets/styles/Calendar.css'
 import { Calendar } from 'v-calendar';
@@ -38,7 +23,7 @@ export default {
       htmlAttrs: { lang: 'es', amp: true },
     })
   },
-  components: { EventCalendar, FinishedEvents, Calendar },
+  components: { EventCalendar, FinishedEvents, Calendar, Events },
   async created() {
     const events = await getEvents()
     this.eventsList = events
