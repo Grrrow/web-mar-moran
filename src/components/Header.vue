@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <router-link class="logo" to="/">Mar Morán - Soprano</router-link>
+            <router-link class="logo" to="/"><img class="logo" src="../assets/images/logo.png" alt=""></router-link>
             <div class="menu-desktop">
                 <router-link class="link" to="/">Home</router-link>
                 <router-link class="link" to="photos">{{ $t('header.photo') }}</router-link>
@@ -57,6 +57,7 @@ header{
 }
 .logo {
   max-width: 50%;
+  margin-top: 8px;
 }
 .logo img{
   width: 100%;
