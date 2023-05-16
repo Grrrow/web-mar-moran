@@ -2,8 +2,8 @@
     <div :class="{biograpy: true, 'full': full}">
         <div class="container">
             <div :class="{photofull: full, photo: !full, 'full': !full}">
-                <img v-if="full" loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/17/17/1684202400000/qx_wid6BNLdwvIgGHvJ3QQ/dW5srpYxJ2yU0ruwcV2UfoFTxyN-mKZfFOWGfncAcSYa5MFpvkRfB3ssAn1t-ii7jEKo5OV__DUBOHuZctii5g/htXovCxXQUYzk2YY7OJ-j76qhVVhM0fPcwI59hFU9ag" alt="Mar Morán picture">
-                <img v-else loading="lazy" class="picture" src="https://v5.airtableusercontent.com/v1/17/17/1684202400000/qx_wid6BNLdwvIgGHvJ3QQ/dW5srpYxJ2yU0ruwcV2UfoFTxyN-mKZfFOWGfncAcSYa5MFpvkRfB3ssAn1t-ii7jEKo5OV__DUBOHuZctii5g/htXovCxXQUYzk2YY7OJ-j76qhVVhM0fPcwI59hFU9ag" alt="Mar Moran Picture">
+                <img v-if="full" loading="lazy" class="picture" src="../assets/images/MarMoran.jpg" alt="Mar Morán picture">
+                <img v-else loading="lazy" class="picture" src="../assets/images/MarMoran.jpg" alt="Mar Moran Picture">
             </div>
             <div class="content" :class="{margincontent: !full}">
                 <div v-if="full" class="textfull">
