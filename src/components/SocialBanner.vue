@@ -1,6 +1,6 @@
 <template>
   <div class="social-banner">
-    <a href="https://www.instagram.com/marmm7/" target="_blank">
+    <a href="https://www.instagram.com/marmoransoprano/" target="_blank">
        <svg
       version="1.1"
       id="Capa_1"
