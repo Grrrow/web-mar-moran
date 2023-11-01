@@ -1,12 +1,12 @@
 <template>
   <a target="_blank" :href="event.link" class="actions">
+    <div @click="shareEvent()" class="shareButton">
+      <ShareIcon color="white" width="30" />
+    </div>
     <div
       class="event-card"
-      :style="{ backgroundImage: 'url(' + event.poster + ')' }"
-    >
-      <div @click="shareEvent()" class="shareButton">
-        <ShareIcon color="white" width="30" />
-      </div>
+    > 
+      <img class="event-card_image" :src="event.poster" alt="">
       <div class="info">
         <h3 class="info__title">{{ event.title }}</h3>
         <h4 class="info__role">- {{ event.role }} -</h4>
@@ -63,14 +63,18 @@ export default {
 </script>
 <style scoped>
 .event-card {
-  height: 520px;
   width: 340px;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   transition: all 0.4s linear;
   cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+.event-card_image {
+  width: 100%;
+  object-fit: cover;
 }
 .event-card:hover {
   outline: 1px solid rgb(255, 255, 255);
@@ -91,8 +95,6 @@ export default {
   padding: 1rem;
 }
 .info {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: rgb(255, 255, 255);
