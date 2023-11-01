@@ -9,7 +9,7 @@
       <img class="event-card_image" :src="event.poster" alt="">
       <div class="info">
         <h3 class="info__title">{{ event.title }}</h3>
-        <h4 class="info__role">- {{ event.role }} -</h4>
+        <h4 v-if="event.role" class="info__role">- {{ event.role }} -</h4>
         <p class="info__date">
           {{ event.location }} |
           {{ new Date(event.date).toLocaleString() }}
