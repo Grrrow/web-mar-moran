@@ -28,6 +28,8 @@
                        <li>“Special Prize of Confiture Giudici for Charming Voice” en el concurso “Córsica Lírica 2022” (Córcega- France) </li>
                        <li>“Concert Prize” Otorgado por el Lyric Theater of Crete en la 3rd Edicion del International Competition “Virgilijus Noreika” for singers (Vilnius - Lituania)</li>
                        <li>“Special Award: Les Veus del Monestir.” en el  Concurs Internacional de Música Les Corts (Barcelona - Spain).</li>
+                       <li>“Premio Extraordinario “Ferrer-Salat” en la 61º Edición del Concurso Internacional de Canto Tenor Viñas (Barcelona)</li>
+
 
                     </ul>                    <p>{{ $t('biography.full.paragraph9') }}</p>
                     <div class="sign">
