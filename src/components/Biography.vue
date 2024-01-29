@@ -11,11 +11,6 @@
                     <p>{{ $t('biography.full.paragraph1') }}</p>
                     <p>{{ $t('biography.full.paragraph2') }}</p>
                     <p>{{ $t('biography.full.paragraph3') }}</p>
-                    <p>{{ $t('biography.full.paragraph4') }}</p>
-                    <p>{{ $t('biography.full.paragraph5') }}</p>
-                    <p>{{ $t('biography.full.paragraph6') }}</p>
-                    <p>{{ $t('biography.full.paragraph7') }}</p>
-                    <p>{{ $t('biography.resume.paragraph4') }}</p>
                     <ul>
                        <li>Primer Premio Absoluto en el IV Concurs Internacional de Cant “Martín y Soler” de Valencia (2021).</li>
                        <li>Primer Premio otorgado por el jurado en el 9º Certamen Internacional de Habaneras para Solistas Líricos dentro del marco del 67 Certamen internacional de Habaneras y Polifonía (2021).</li>
@@ -29,19 +24,17 @@
                        <li>“Concert Prize” Otorgado por el Lyric Theater of Crete en la 3rd Edicion del International Competition “Virgilijus Noreika” for singers (Vilnius - Lituania)</li>
                        <li>“Special Award: Les Veus del Monestir.” en el  Concurs Internacional de Música Les Corts (Barcelona - Spain).</li>
                        <li>“Premio Extraordinario “Ferrer-Salat” en la 61º Edición del Concurso Internacional de Canto Tenor Viñas (Barcelona)</li>
-
-
-                    </ul>                    <p>{{ $t('biography.full.paragraph9') }}</p>
+                    </ul>
+                    <p>{{ $t('biography.full.paragraph4') }}</p>
                     <div class="sign">
                         <img src="https://39373757.servicio-online.net/wp-content/uploads/2017/11/sign5.png" alt="">
                     </div>
                 </div>
                 <div v-else class="text">
                     <h1 class="title">{{ $t('biography.title') }}</h1>
-                    <p><i class="quote">{{ $t('biography.resume.paragraph1') }}</i></p>
+                    <p>{{ $t('biography.resume.paragraph1') }}</p>
                     <p>{{ $t('biography.resume.paragraph2') }}</p>
                     <p>{{ $t('biography.resume.paragraph3') }}</p>
-                    <p>{{ $t('biography.resume.paragraph4') }}</p>
                     <ul>
                         <li>Primer Premio Absoluto en el IV Concurs Internacional de Cant “Martín y Soler” de Valencia (2021).</li>
                        <li>Primer Premio otorgado por el jurado en el 9º Certamen Internacional de Habaneras para Solistas Líricos dentro del marco del 67 Certamen internacional de Habaneras y Polifonía (2021).</li>
@@ -55,9 +48,9 @@
                        <li>“Concert Prize” Otorgado por el Lyric Theater of Crete en la 3rd Edicion del International Competition “Virgilijus Noreika” for singers (Vilnius - Lituania)</li>
                        <li>“Special Award: Les Veus del Monestir.” en el  Concurs Internacional de Música Les Corts (Barcelona - Spain).</li>
                        <li>“Premio Extraordinario “Ferrer-Salat” en la 61º Edición del Concurso Internacional de Canto Tenor Viñas (Barcelona)</li>
-                    </ul>
-                    <p>{{ $t('biography.resume.paragraph5') }}</p>
-                    <p>{{ $t('biography.resume.paragraph6') }}</p>
+                    </ul>                   
+                    <p>{{ $t('biography.resume.paragraph4') }}</p>
+
                     <div class="sign">
                         <router-link class="link" to="/biography">
                             {{ $t('biography.knowMore') }}
