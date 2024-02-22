@@ -8,20 +8,13 @@
                 <p>A Piacere Musik</p>
                 <p>+34 663 93 38 53</p>
                 <a class="ligth-link" href="mailto:javiersantacana@a-piacere-musik.es">javiersantacana@a-piacere-musik.es</a>
+            </div>
+            <div class="contact-info">
+                <h1 class="contact-info__title">{{ $t('contact.info') }}</h1>
+                <br>
+                <a class="ligth-link" href="mailto:info@marmoransoprano.com">info@marmoransoprano.com</a>
                 <SocialBanner />
             </div>
-            <form id="msform" @submit.prevent="sendEmail">
-                <fieldset>
-                    <input required type="text" v-model="name" name="name" :placeholder="$t('contact.form.name')" />
-                    <input required type="text" v-model="email" name="email" :placeholder="$t('contact.form.email')" />
-                    <textarea required name="message" v-model="message" id="" :placeholder="$t('contact.form.message')" cols="30" rows="10"></textarea>
-                    <input type="submit" :disabled="token.length === 0" :value="$t('contact.form.send')" class="next action-button" />
-                </fieldset>
-                <div class="feedback-text">
-                    <div v-if="error" class="feedback-text__error"> {{ $t('contact.form.error') }} </div>
-                    <div v-if="success" class="feedback-text__success"> {{ $t('contact.form.success') }}</div>
-                </div>
-            </form>
         </div>
     </div>
 </template>
